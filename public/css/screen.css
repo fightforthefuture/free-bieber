@@ -30,7 +30,12 @@ p, ul li {margin-bottom: 10px;}
     background: url(../img/stripes_background.png);
     overflow: auto;
     color: #000;
-    padding-top: 20px;
+    padding-top: 40px;
+}
+
+.glow {
+    background: url(../img/glow_background.png) top center no-repeat;
+    overflow: auto;
 }
 
 h1.logo {
