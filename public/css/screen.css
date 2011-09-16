@@ -2,6 +2,9 @@ body {
     font-family: "helvetica neue";
     font-size: 14px;
     line-height: 1.5;
+    background: url(../img/body_background.png);
+    margin: 0;
+    color: #fff;
 }
 
 p, ul li {margin-bottom: 10px;}
@@ -11,12 +14,32 @@ p, ul li {margin-bottom: 10px;}
     margin: 0 auto;
 }
 
+.superfluous {
+    background: url(../img/teal_background.png);
+    height: 20px;
+    margin: 0;
+}
+
+.white {
+    background:url(../img/white_background.png);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.stripes {
+    background: url(../img/stripes_background.png);
+    overflow: auto;
+    color: #000;
+}
+
 h1.logo {
     font-weight: bold;
     display: block;
-    width: 100%;
-    font-size: 40px;
-    margin-bottom: 20px;
+    text-indent: -9999px;
+    background: url(../img/h1_text.png) no-repeat;
+    width: 998px;
+    height: 203px;
+    margin: 0 auto;
 }
 
 h2, h3, h4 {font-weight: bold;}
