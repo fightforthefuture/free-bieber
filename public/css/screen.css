@@ -1,0 +1,136 @@
+body {
+    font-family: "helvetica neue";
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+p, ul li {margin-bottom: 10px;}
+
+.wrap {
+    width: 800px;
+    margin: 0 auto;
+}
+
+h1.logo {
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+h2, h3, h4 {font-weight: bold;}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+h3 {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+div {margin-bottom: 20px;}
+
+.left {
+    float: left;
+    width: 380px;
+    clear: left;
+}
+
+.right {
+    float: right;
+    width: 380px;
+    clear: right;
+}
+
+.slide img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+}
+
+p.caption {
+    margin-top: -60px;
+    margin-right: 1px;
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    display: block;
+    float: right;
+    position: relative;
+    z-index: 9;
+    font-size: 16px;
+}
+
+input { 
+    padding: 5px;
+}
+
+button, .more {
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    background: #eee;
+    padding: 3px 15px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover, .more:hover {
+    background: #ccc;
+}
+
+.more {float: right;}
+
+.user_submitted .art ul li, 
+.user_submitted .videos ul li {
+    width: 150px;
+    height: 150px;
+    background: blue;
+    display: block;
+}
+
+.user_submitted .art {
+    float: left;
+    width: 150px;
+}
+
+.user_submitted .videos {
+    float: right;
+    width: 150px;
+}
+
+.FAQ .question {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.FAQ .answer {
+    margin-bottom: 20px;
+}
+
+ul.follow {float: left;}
+
+.follow li {
+    display: inline;
+}
+
+form.follow {
+    float: right;
+}
+
+.sign_it {margin-bottom: 10px;}
+
+.sign_it .email {width: 54%;}
+
+.follow input {width: 220px;}
+
+.record {width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 30px;}
