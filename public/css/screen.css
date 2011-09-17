@@ -105,7 +105,7 @@ input {
     padding: 5px;
 }
 
-button, .more {
+.submit_btn, .real_submit, button, .more {
     font-size: 14px;
     font-weight: bold;
     border: 1px solid #ccc;
@@ -117,7 +117,7 @@ button, .more {
     cursor: pointer;
 }
 
-button:hover, .more:hover {
+.submit_btn:hover, .real_submit:hover, button:hover, .more:hover {
     background: #ccc;
 }
 
@@ -178,23 +178,16 @@ form.follow {
     font-size: 12px;
 }
 
-.ak-form {
-    border: 1px solid #646464;
-    background: #fff;
-    width: 200px;
-    position: relative;
-    z-index: 10;
-    margin-top:  10px;
-    margin-left: 600px;
-    margin-bottom: -150px;
-    color: #000;
-    padding: 10px;
-}
-
 .ak-form label {
     width: 50px;
     display: inline-block;
 }
 
+.ak-form .submit_btn, .ak-form input.email {display: inline;}
+
 input.submit_btn {
+}
+
+.start_hidden {
+    display: none;
 }
