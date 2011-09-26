@@ -1,193 +1,69 @@
 body {
+    margin: 0; 
+    padding: 0;
     font-family: "helvetica neue";
-    font-size: 14px;
-    line-height: 1.5;
-    background: url(../img/body_background.png);
-    margin: 0;
-    color: #fff;
+    font-size: 13px;
+    line-height: 1.3;
 }
-
-p, ul li {margin-bottom: 10px;}
 
 .wrap {
-    width: 800px;
+    width: 990px;
     margin: 0 auto;
 }
 
-.superfluous {
-    background: url(../img/teal_background.png);
-    height: 20px;
-    margin: 0;
-}
-
-.white {
-    background:url(../img/white_background.png);
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-.stripes {
-    background: url(../img/stripes_background.png);
-    overflow: auto;
-    color: #000;
-    padding-top: 40px;
-}
-
-.glow {
-    background: url(../img/glow_background.png) top center no-repeat;
-    overflow: auto;
-}
-
-h1.logo {
-    font-weight: bold;
+.highs h1 {
     display: block;
+    width: 989px;
+    height: 85px;
+    background: url(../img/h1_background.png) no-repeat;
+    border-bottom: 1px solid black;
     text-indent: -9999px;
-    background: url(../img/h1_text.png) no-repeat;
-    width: 998px;
-    height: 203px;
-    margin: 0 auto;
-}
-
-h2, h3, h4 {font-weight: bold;}
-
-h2 {
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-h3 {
-    margin-bottom: 5px;
-    font-size: 14px;
-}
-
-div {margin-bottom: 20px;}
-
-.left {
-    float: left;
-    width: 380px;
-    clear: left;
-}
-
-.right {
-    float: right;
-    width: 380px;
-    clear: right;
-}
-
-.slide img {
-    position: relative;
-    z-index: 1;
-    border: #fff solid 20px;
-    margin-top: -40px;
-    margin-bottom: -20px;
-}
-
-.slide {
+    margin: 0;
     padding: 0;
-    -moz-transform: rotate(-5deg);
-    -webkit-transform: rotate(-5deg);
 }
 
-p.caption {
-    margin-top: -90px;
-    margin-right: -19px;
-    padding: 10px 20px;
-    background: #000;
-    color: #fff;
-    display: block;
-    float: right;
-    position: relative;
-    z-index: 9;
-    font-size: 16px;
+.highs, .mids {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    overflow: hidden;
 }
 
-input { 
-    padding: 5px;
-}
+.mids {height: 372px;}
 
-.submit_btn, .real_submit, button, .more {
-    font-size: 14px;
-    font-weight: bold;
-    border: 1px solid #ccc;
+.share_and_sign {
+    width: 582px;
+    height: 205px;
     background: #eee;
-    padding: 3px 15px;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    cursor: pointer;
+    position: absolute;
+    left: 320px;
+    margin-top: -20px;
 }
 
-.submit_btn:hover, .real_submit:hover, button:hover, .more:hover {
-    background: #ccc;
+.lefties, .righties {
+    background: #272740;
+    color: #fff;
+    width: 210px;
+    height: 145px;
 }
 
-.more {float: right;}
+.righties {float: right;}
+.lefties {float: left;}
 
-.user_submitted .art ul li, 
-.user_submitted .videos ul li {
-    width: 150px;
-    height: 150px;
-    background: blue;
-    display: block;
-}
-
-.user_submitted .art {
-    float: left;
-    width: 150px;
-}
-
-.user_submitted .videos {
+.details {
     float: right;
-    width: 150px;
+    width: 370px;
+    height: 110px;
+    margin-top: 50px;
+    margin-right: 50px;
 }
 
-.FAQ .question {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.FAQ .answer {
-    margin-bottom: 20px;
-}
-
-ul.follow {float: left;}
-
-.follow li {
-    display: inline;
-}
-
-form.follow {
-    float: right;
-}
-
-.sign_it {margin-bottom: 10px;}
-
-.sign_it .email {width: 54%;}
-
-.follow input {width: 220px;}
-
-.record {width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-size: 30px;
-}
-
-.footer {
+.footies {
     clear: both;
-    margin-top: 20px;
-    font-size: 12px;
-}
-
-.ak-form label {
-    width: 50px;
-    display: inline-block;
-}
-
-.ak-form .submit_btn, .ak-form input.email {display: inline;}
-
-input.submit_btn {
-}
-
-.start_hidden {
-    display: none;
+    background: #222239;
+    margin: 0 auto;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+    margin-top: 185px;
+    padding: 10px;
+    width: 340px;
 }
