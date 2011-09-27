@@ -34,4 +34,3 @@ group :production do
     end
 
 # Skip attempting to install the pg gem
-$ bundle install --without production
