@@ -1,0 +1,102 @@
+2011-09-27T01:57:50+00:00 heroku[router]: GET freebeiber.org/robots.txt dyno=web.1 queue=0 wait=0ms service=9ms status=200 bytes=204
+2011-09-27T01:57:55+00:00 app[web.1]: cache: [GET /] miss, store
+2011-09-27T01:57:55+00:00 heroku[router]: GET freebeiber.org/ dyno=web.1 queue=0 wait=0ms service=8ms status=200 bytes=4927
+2011-09-27T01:57:57+00:00 heroku[router]: GET freebeiber.org/css/reset.css dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=1027
+2011-09-27T01:57:57+00:00 app[web.1]: cache: [GET /css/reset.css] miss, store
+2011-09-27T01:57:57+00:00 heroku[router]: GET freebeiber.org/css/screen.css dyno=web.1 queue=0 wait=0ms service=7ms status=200 bytes=1124
+2011-09-27T01:58:03+00:00 app[web.1]: cache: [GET /js/jquery.fittext.js] miss, store
+2011-09-27T01:58:03+00:00 heroku[router]: GET freebeiber.org/js/jquery.fittext.js dyno=web.1 queue=0 wait=0ms service=8ms status=200 bytes=1115
+2011-09-27T01:58:03+00:00 app[web.1]: cache: [GET /js/script.js] miss, store
+2011-09-27T01:58:03+00:00 heroku[router]: GET freebeiber.org/js/script.js dyno=web.1 queue=1 wait=11ms service=10ms status=200 bytes=221
+2011-09-27T01:58:08+00:00 app[web.1]: cache: [GET /js/script.js] stale, invalid, store
+2011-09-27T01:58:08+00:00 heroku[router]: GET freebeiber.org/js/script.js dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=221
+2011-09-27T01:58:14+00:00 app[web.1]: cache: [GET /js/jquery.fittext.js] stale, invalid, store
+2011-09-27T01:58:14+00:00 heroku[router]: GET freebeiber.org/js/jquery.fittext.js dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=1115
+2011-09-27T01:58:22+00:00 app[web.1]: cache: [GET /css/reset.css] stale, invalid, store
+2011-09-27T01:58:22+00:00 heroku[router]: GET freebeiber.org/css/reset.css dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=1027
+2011-09-27T01:58:22+00:00 heroku[nginx]: 38.99.82.205 - - [26/Sep/2011:18:58:22 -0700] "GET /css/reset.css HTTP/1.1" 200 1027 "-" "Mozilla/4.0 (compatible; MSIE5.0; Windows NT; DigExt)" freebeiber.org
+2011-09-27T01:58:22+00:00 app[web.1]: cache: [GET /css/screen.css] stale, invalid, store
+2011-09-27T01:58:22+00:00 heroku[router]: GET freebeiber.org/css/screen.css dyno=web.1 queue=0 wait=0ms service=8ms status=200 bytes=1124
+2011-09-27T01:58:22+00:00 heroku[nginx]: 38.99.82.205 - - [26/Sep/2011:18:58:22 -0700] "GET /css/screen.css HTTP/1.1" 200 1124 "-" "Mozilla/4.0 (compatible; MSIE5.0; Windows NT; DigExt)" freebeiber.org
+2011-09-27T02:20:16+00:00 heroku[router]: GET freebieber.heroku.com/teaser/ dyno=web.1 queue=0 wait=0ms service=5ms status=500 bytes=728
+2011-09-27T02:20:16+00:00 app[web.1]: 
+2011-09-27T02:20:16+00:00 app[web.1]: 
+2011-09-27T02:20:16+00:00 app[web.1]: Started GET "/teaser/" for 76.26.255.13 at 2011-09-26 19:20:16 -0700
+2011-09-27T02:20:16+00:00 app[web.1]: 
+2011-09-27T02:20:16+00:00 app[web.1]: ActiveRecord::ConnectionNotEstablished (ActiveRecord::ConnectionNotEstablished):
+2011-09-27T02:20:16+00:00 app[web.1]:   
+2011-09-27T02:20:16+00:00 app[web.1]: 
+2011-09-27T02:20:16+00:00 app[web.1]: 
+2011-09-27T02:20:16+00:00 app[web.1]: cache: [GET /teaser/] m
+iss
+2011-09-27T02:20:16+00:00 heroku[nginx]: 76.26.255.13 - - [26/Sep/2011:19:20:16 -0700] "GET /teaser/ HTTP/1.1" 500 728 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_1) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.24 Safari/535.2" freebieber.heroku.com
+2011-09-27T03:09:06+00:00 heroku[router]: POST freebieber.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=13760ms status=200 bytes=18
+2011-09-27T03:09:06+00:00 heroku[nginx]: 184.73.1.39 - app1016233 [26/Sep/2011:20:09:06 -0700] "POST /_heroku/console?session_action=create&session_id=1210097 HTTP/1.1" 200 18 "-" "-" freebieber.heroku.com
+2011-09-27T03:11:32+00:00 heroku[slugc]: Slug compilation started
+2011-09-27T03:11:41+00:00 heroku[api]: Deploy 0070ed4 by hello@joshuablount.com
+2011-09-27T03:11:41+00:00 heroku[api]: Release v15 created by hello@joshuablount.com
+2011-09-27T03:11:41+00:00 heroku[web.1]: State changed from up to bouncing
+2011-09-27T03:11:41+00:00 heroku[web.1]: State changed from bouncing to created
+2011-09-27T03:11:41+00:00 heroku[web.1]: State changed from created to starting
+2011-09-27T03:11:42+00:00 heroku[slugc]: Slug compilation finished
+2011-09-27T03:11:44+00:00 heroku[web.1]: Stopping process with SIGTERM
+2011-09-27T03:11:44+00:00 app[web.1]: >> Stopping ...
+2011-09-27T03:11:44+00:00 heroku[web.1]: Starting process with command `thin -p 48931 -e production -R /home/heroku_rack/heroku.ru start`
+2011-09-27T03:11:44+00:00 her
+oku[web.1]: Process exited
+2011-09-27T03:11:47+00:00 app[web.1]: >> Thin web server (v1.2.6 codename Crazy Delicious)
+2011-09-27T03:11:47+00:00 app[web.1]: >> Maximum connections set to 1024
+2011-09-27T03:11:47+00:00 app[web.1]: >> Listening on 0.0.0.0:48931, CTRL+C to stop
+2011-09-27T03:11:48+00:00 heroku[web.1]: State changed from starting to up
+2011-09-27T03:11:57+00:00 app[web.1]: 
+2011-09-27T03:11:57+00:00 app[web.1]: 
+2011-09-27T03:11:57+00:00 app[web.1]: Started GET "/teaser" for 76.26.255.13 at 2011-09-26 20:11:57 -0700
+2011-09-27T03:11:57+00:00 heroku[router]: GET freebieber.heroku.com/teaser dyno=web.1 queue=0 wait=0ms service=505ms status=500 bytes=728
+2011-09-27T03:11:57+00:00 app[web.1]: 
+2011-09-27T03:11:57+00:00 app[web.1]: ActiveRecord::ConnectionNotEstablished (ActiveRecord::ConnectionNotEstablished):
+2011-09-27T03:11:57+00:00 app[web.1]:   
+2011-09-27T03:11:57+00:00 app[web.1]: 
+2011-09-27T03:11:57+00:00 app[web.1]: 
+2011-09-27T03:11:57+00:00 heroku[nginx]: 76.26.255.13 - - [26/Sep/2011:20:11:57 -0700] "GET /teaser HTTP/1.1" 500 728 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_1) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.24 Safari/535.2" freebieber.heroku.com
+2011-09-27T03:11:59+00:00 heroku[router]: GET freebieber.heroku.com/teaser/ dyno=web.1 queue=0 wait=0ms service=5ms status=500 bytes=728
+2011-09-27T03:11:59+00:00 app[web.1]: 
+2011-09-27T03:11:59+00:00 app[web.1]: 
+2011-09-27T03:11:59+00:00 app[web.1]: Started GET "/teaser/" for 76.26.255.13 at 2011-09-26 20:11:59 -0700
+2011-09-27T03:11:59+00:00 app[web.1]: 
+2011-09-27T03:11:59+00:00 app[web.1]: ActiveRecord::ConnectionNotEstablished (ActiveRecord::ConnectionNotEstablished):
+2011-09-27T03:11:59+00:00 app[web.1]:   
+2011-09-27T03:11:59+00:00 app[web.1]: 
+2011-09-27T03:11:59+00:00 app[web.1]: 
+2011-09-27T03:11:59+00:00 app[web.1]: cache: [GET /teaser/] miss
+2011-09-27T03:11:59+00:00 heroku[nginx]: 76.26.255.13 - - [26/Sep/2011:20:11:59 -0700] "GET /teaser/ HTTP/1.1" 500 728 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_1) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.24 Safari/535.2" freebieber.heroku.com
+2011-09-27T03:12:55+00:00 heroku[router]: GET freebieber.heroku.com/teaser/ dyno=web.1 queue=0 wait=0ms service=4ms status=500 bytes=728
+2011-09-27T03:12:55+00:00 heroku[nginx]: 76.26.255.13 - - [26/Sep/2011:20:12:55 -0700] "GET /teaser/ HTTP/1.1" 500 728 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_1) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.24 Safari/535.2" freebieber.heroku.com
+2011-09-27T03:12:55+00:00 app[web.1]: 
+2011-09-27T03:12:55+00:00 app[web.1]: 
+2011-09-27T03:12:55+00:00 app[web.1]: Started GET "/teaser/" for 76.26.255.13 at 2011-09-26 20:12:55 -0700
+2011-09-27T03:12:55+00:00 app[web.1]: 
+2011-09-27T03:14:33+00:00 heroku[slugc]: Slug compilation started
+2011-09-27T03:14:41+00:00 heroku[api]: Deploy d2d43f6 by hello@joshuablount.com
+2011-09-27T03:14:42+00:00 heroku[api]: Release v16 created by hello@joshuablount.com
+2011-09-27T03:14:42+00:00 heroku[web.1]: State changed from up to bouncing
+2011-09-27T03:14:42+00:00 heroku[web.1]: State changed from bouncing to created
+2011-09-27T03:14:42+00:00 heroku[web.1]: State changed from created to starting
+2011-09-27T03:14:42+00:00 heroku[slugc]: Slug compilation finished
+2011-09-27T03:14:43+00:00 heroku[web.1]: Stopping process with SIGTERM
+2011-09-27T03:14:43+00:00 app[web.1]: >> Stopping ...
+2011-09-27T03:14:43+00:00 heroku[web.1]: Process exited
+2011-09-27T03:14:45+00:00 heroku[web.1]: Starting process with command `thin -p 44839 -e production -R /home/heroku_rack/heroku.ru start`
+2011-09-27T03:14:48+00:00 app[web.1]: >> Thin web server (v1.2.6 codename Crazy Delicious)
+2011-09-27T03:14:48+00:00 app[web.1]: >> Maximum connections set to 1024
+2011-09-27T03:14:48+00:00 app[web.1]: >> Listening on 0.0.0.0:44839, CTRL+C to stop
+2011-09-27T03:16:00+00:00 app[web.1]: 
+2011-09-27T03:16:00+00:00 app[web.1]: 
+2011-09-27T03:16:00+00:00 app[web.1]: Started GET "/teaser/" for 76.26.255.13 at 2011-09-26 20:16:00 -0700
+2011-09-27T03:16:00+00:00 app[web.1]: 
+2011-09-27T03:16:00+00:00 app[web.1]: ActiveRecord::ConnectionNotEstablished (ActiveRecord::ConnectionNotEstablished):
+2011-09-27T03:16:00+00:00 app[web.1]:   
+2011-09-27T03:16:00+00:00 app[web.1]: 
+2011-09-27T03:16:00+00:00 app[web.1]: 
+2011-09-27T03:16:00+00:00 app[web.1]: cache: [GET /teaser/] miss
+2011-09-27T03:16:00+00:00 heroku[router]: GET freebieber.heroku.com/teaser/ dyno=web.1 queue=0 wait=0ms service=611ms status=500 bytes=728
+2011-09-27T03:16:00+00:00 heroku[nginx]: 76.26.255.13 - - [26/Sep/2011:20:16:00 -0700] "GET /teaser/ HTTP/1.1" 500 728 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_1) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.24 Safari/535.2" freebieber.heroku.com

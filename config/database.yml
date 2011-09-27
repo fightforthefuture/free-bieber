@@ -18,11 +18,10 @@ test:
   pool: 5
   timeout: 5000
 
-production: 
-  encoding: unicode
-  adapter: postgresql
-  username: ffgwaywgcl
-  port: 5432
-  host: ec2-50-19-226-176.compute-1.amazonaws.com
-  database: ffgwaywgcl
-  password: Xwx0g6toiGg9rhgqZ6OM 
+production:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
+
+
