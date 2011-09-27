@@ -8,7 +8,7 @@ gem 'rails', '3.1.0'
 gem 'sqlite3'
 
 gem 'json'
-
+gem 'pg'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -27,10 +27,3 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug'
-
-group :production do
-  # gems specifically for Heroku go here
-    gem "pg"
-    end
-
-# Skip attempting to install the pg gem
