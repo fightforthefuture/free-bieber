@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>OverlayRecorder</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style type="text/css" media="screen">
+		#flashContent {width:480px;height:360px;}
+		#bodydiv {width:100%; height:100%; }
+		</style>
+	</head>
+    
+<script type="text/javascript" src="swfobject.js"></script>
+
+	<script>
+		/* This function will be called from flash after flash preloaded and it loded the overlay image */
+		function onLoad()
+		{
+			var x=document.getElementById("navigation");
+			x.style.visibility = "visible";
+			
+		}
+		//this function called from flash and it will show you the progress. It will just dispatched the current media position only.
+		function mediaProgress(value){}
+		function publishProgress(status,percent,transferred,total,speed){ var x=document.getElementById("status"); x.innerHTML = "status > " +status + " :: percent > " +percent + " :: transferred > " +transferred + " :: total > " +total + " :: speed > " +speed  }
+		function publishStatus(status){ var x=document.getElementById("status"); x.innerHTML = status  }
+		function publishFinished(){ var x=document.getElementById("status"); x.innerHTML = "Finished" }
+		//following are function call to flash object
+		function initRecording() 
+		{
+			var x=getMovieName('OverlayRecorder');
+			x.initRecording(); 
+		}
+		function startRecording() 
+		{ 
+			var x=getMovieName('OverlayRecorder');
+			x.startRecording(); 
+		}
+		function pauseRecording() 
+		{
+			var x=getMovieName('OverlayRecorder');
+			x.pauseRecording(); 
+		}
+		function resetRecording() 
+		{ 
+			var x=getMovieName('OverlayRecorder');
+			x.resetRecording(); 
+		}
+		function publishRecording() 
+		{ 
+			var x=getMovieName('OverlayRecorder');
+			x.publishRecording(); 
+		}
+		
+		function getMovieName(movieName) { if (navigator.appName.indexOf("Microsoft") != -1) { return window[movieName] } else { return document[movieName] } }
+		
+	</script>
+	<body>
+	<div id="bodydiv" align="center" style="width:100%;height:100%;">
+		<div id="flash"  style="float:left;position:absolute; width:480px;height:360px;">
+			<div id="flashContent">
+			</div>
+            <div id="navigation" style="visibility:hidden;float:left;position:absolute">
+                <a href="javascript:initRecording()">initRecording</a><br/><br/>
+
+                <a href="javascript:startRecording()">startRecording</a><br/><br/>
+                <a href="javascript:pauseRecording()">pauseRecording</a><br/><br/>
+                <a href="javascript:resetRecording()">resetRecording</a><br/><br/>
+                <a href="javascript:publishRecording()">publishRecording</a><br/><br/>
+			</div>
+		</div>
+        <div id="status"></div>
+
+	</div>
+ 	<script type="text/javascript"> 
+		var so = new SWFObject("OverlayRecorder.swf", "OverlayRecorder", "320", "240", "10", "0x1E1E1E"); 
+		so.addParam("scale", "noscale"); 
+		so.addParam("align", "middle"); 
+		so.addParam("salign", "tl");
+		so.addParam("showmenu", "false");
+		so.addParam("allowScriptAccess", "always");
+		so.addParam("flashvars", "overlayimage=http://joshuablount.com/media/bars.png&filename=random");
+		so.write("flashContent"); 
+    </script> 
+	</body>
+</html>
