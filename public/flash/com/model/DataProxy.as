@@ -18,9 +18,9 @@
 		public static const NAME:String 		= 	"DataProxy";		
 		public static const DATA_LOADED:String 	= 	"DATA_LOADED";		
 		
-		public static const host:String			=	"rtmp://ec2-107-20-93-100.compute-1.amazonaws.com/overlayrecorder";
-		public static const publish:String		=	"http://ec2-107-20-93-100.compute-1.amazonaws.com:8080/publish.php";
-		public static const poll:String			=	"http://ec2-107-20-93-100.compute-1.amazonaws.com:8080/status.php";
+		public static const host:String			=	"rtmp://ec2-107-20-145-240.compute-1.amazonaws.com/overlayrecorder";
+		public static const publish:String		=	"http://ec2-107-20-145-240.compute-1.amazonaws.com:8080/publish.php";
+		public static const poll:String			=	"http://ec2-107-20-145-240.compute-1.amazonaws.com:8080/status.php";
 		public static var overlayimage:String;
 		
 		public static var filename:String;
