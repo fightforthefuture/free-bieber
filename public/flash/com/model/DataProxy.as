@@ -12,25 +12,29 @@
 	import flash.events.TimerEvent;
 	import com.Application;
 	import flash.external.ExternalInterface;
+	import com.utils.Global;
+	import flash.events.IOErrorEvent;
+	import flash.events.SecurityErrorEvent;
+	import flash.events.HTTPStatusEvent;
 	
 	public class DataProxy extends Proxy
 	{
-		public static const NAME:String 		= 	"DataProxy";		
-		public static const DATA_LOADED:String 	= 	"DATA_LOADED";		
+		public static const NAME		:	String 		= 	"DataProxy";		
+		public static const DATA_LOADED	:	String 		= 	"DATA_LOADED";		
+
+		public static var overlayimage	:	String;
+		public static var filename		:	String;
+		public static var oildr			:	Loader		=	new Loader();
 		
-		public static const host:String			=	"rtmp://ec2-107-20-145-240.compute-1.amazonaws.com/overlayrecorder";
-		public static const publish:String		=	"http://ec2-107-20-145-240.compute-1.amazonaws.com:8080/publish.php";
-		public static const poll:String			=	"http://ec2-107-20-145-240.compute-1.amazonaws.com:8080/status.php";
-		public static var overlayimage:String;
-		
-		public static var filename:String;
-		public static var recordtime:Number		=	10;
-		public static var oildr:Loader			=	new Loader();
+		private var chance				:	Number		=	0;
 		//
-		private var pUL:URLLoader				=	new URLLoader();
-		private var pUR:URLRequest				=	new URLRequest();
-		private var pID:String					;
-		private var pTimer:Timer				=	new Timer(1000);
+		private var s1					:	Number		=	0;
+		private var s2					:	Number		=	0;
+		//
+		private var pUL					:	URLLoader	=	new URLLoader();
+		private var pUR					:	URLRequest	=	new URLRequest();
+		private var pID					:	String;
+		private var pTimer				:	Timer		=	new Timer(1000);
 		public function DataProxy(proxyName:String=null, data:Object=null)
 		{
 			super(NAME, data);
@@ -44,19 +48,66 @@
 		
 		private function onLoadData(e:Event):void
 		{
+			//checking server
+			checkServer();
+		}
+		public function checkServer():void
+		{
+			var uv:URLVariables	=	new URLVariables();
+			var ur:URLRequest	=	new URLRequest();
+			
+			if(chance==0){uv.ip = Global.SERVER_1; ur.url =	Global.HTTP + Global.SERVER_1;}
+			else if(chance==1){uv.ip = Global.SERVER_2;ur.url =	Global.HTTP + Global.SERVER_2;}
+			
+			ur.url				=	ur.url + ":" + Global.PORT+"/" + Global.CONNECT;
+			ur.data				=	uv;
+			var ul:URLLoader	=	new URLLoader(ur);
+			
+			ul.addEventListener(Event.COMPLETE,onServerStatus);
+			ul.addEventListener(IOErrorEvent.IO_ERROR,onServerIOError);
+			ul.addEventListener(SecurityErrorEvent.SECURITY_ERROR,onServerSecurityError)
+			//ul.addEventListener(HTTPStatusEvent.HTTP_STATUS,onServerHTTPStatus)
+			ul.dataFormat		=	URLLoaderDataFormat.VARIABLES;
+			ul.load(ur);
+		}
+		//connection file handler
+		private function onServerStatus			(	e	:	Event				)	:	void 	{	var ul:URLLoader = e.target as URLLoader; 	testStatus( ul ); 	}
+		private function onServerIOError		(	e	:	IOErrorEvent		)	:	void	{	var ul:URLLoader = e.target as URLLoader; 	testStatus( ul );	}
+		private function onServerSecurityError	(	e	:	SecurityErrorEvent	)	:	void	{	var ul:URLLoader = e.target as URLLoader; 	testStatus( ul );	}
+		private function onServerHTTPStatus		(	e	:	HTTPStatusEvent		)	:	void	{	var ul:URLLoader = e.target as URLLoader; 	testStatus( ul );	}
+		//
+		private function testStatus	(e:URLLoader):void
+		{ 	
+			var d:Object	=	e.data;
+			if(d.server)
+			{
+				if(chance==0) s1 = d.server;
+				else if(chance == 1) s2 = d.server;
+			}
+			if(chance==0)chance = 1;
+			else if(chance == 1)chance = 2;
+			
+			if(chance==1)checkServer();
+			else testServer()
+		}
+		private function testServer()
+		{
+			if(s1>s2)	Global.SERVER = Global.SERVER_2;
+			else		Global.SERVER = Global.SERVER_1;
+			
 			var am:ApplicationMediator	=	facade.retrieveMediator(ApplicationMediator.NAME) as ApplicationMediator;
 			am.startApp();
 		}
-		
 		//publish call
 		public function publishVideo():void
 		{
 			var uv:URLVariables	=	new URLVariables();
 			uv.file				=	DataProxy.filename;
-			uv.image				=	DataProxy.overlayimage;
+			uv.image			=	DataProxy.overlayimage;
+			uv.ip 				= 	Global.SERVER;
 			//
 			pUR.data			=	uv;
-			pUR.url				=	DataProxy.publish;
+			pUR.url				=	Global.HTTP + Global.SERVER + ":" + Global.PORT+ "/" + Global.PUBLISH;
 			//
 			pUL.dataFormat		=	URLLoaderDataFormat.VARIABLES;
 			pUL.addEventListener(Event.COMPLETE,onVideoStatus)
@@ -80,7 +131,7 @@
 			var uv:URLVariables	=	new URLVariables();
 			uv.id				=	pID;
 			//
-			pUR.url				=	DataProxy.poll;
+			pUR.url				=	Global.HTTP + Global.SERVER+ ":" + Global.PORT + "/" + Global.STATUS;;
 			pUR.data			=	uv;
 			//
 			pUL.dataFormat		=	URLLoaderDataFormat.TEXT;

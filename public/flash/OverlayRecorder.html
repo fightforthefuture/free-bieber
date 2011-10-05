@@ -19,6 +19,10 @@
 			x.style.visibility = "visible";
 			
 		}
+		function debugRecording(value)
+		{
+			//window.alert(value);	
+		}
 		//this function called from flash and it will show you the progress. It will just dispatched the current media position only.
 		function mediaProgress(value){}
 		function publishProgress(status,percent,transferred,total,speed){ var x=document.getElementById("status"); x.innerHTML = "status > " +status + " :: percent > " +percent + " :: transferred > " +transferred + " :: total > " +total + " :: speed > " +speed  }
@@ -72,7 +76,7 @@
 
 	</div>
  	<script type="text/javascript"> 
-		var so = new SWFObject("OverlayRecorder.swf", "OverlayRecorder", "320", "240", "10", "0x1E1E1E"); 
+		var so = new SWFObject("OverlayRecorder.swf", "OverlayRecorder", "480", "360", "10", "0x1E1E1E"); 
 		so.addParam("scale", "noscale"); 
 		so.addParam("align", "middle"); 
 		so.addParam("salign", "tl");

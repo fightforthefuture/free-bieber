@@ -7,6 +7,7 @@
 	import com.Application;
 	import org.puremvc.as3.interfaces.INotification;
 	import com.utils.VideoRecordEvent;
+	import com.utils.Global;
 
 	public class VideoRecordMediator extends Mediator
 	{
@@ -18,9 +19,7 @@
 		}
 		override public function onRegister():void
 		{
-			view.fmsHost = DataProxy.host;
-			view.mediaDuration = DataProxy.recordtime;
-
+			view.fmsHost = Global.RTMP + Global.SERVER + "/" +  Global.RAPP;
 			view.addEventListener(VideoRecordEvent.MEDIA_UPDATE,onMediaUpdate);
 			view.addEventListener(VideoRecordEvent.MEDIA_COMPLETE,onMediaComplete);
 			view.addEventListener(VideoRecordEvent.MEDIA_READY,onMediaReady);
