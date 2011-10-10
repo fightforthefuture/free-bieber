@@ -11,7 +11,7 @@ body {
 .wrap {
     margin: 0 auto;
     width: 1135px;
-    background: url(../img/wrap_background.jpg) no-repeat center -1px #050508;
+    background: url(../img/wrap_background.jpg) no-repeat center -21px #050508;
     margin-bottom: 100px;
 }
 
@@ -48,7 +48,7 @@ a {color: #ff8321;}
 .headline {
     text-indent: -9999px;
     background: url(../img/headline_background.png) no-repeat;
-    height: 88px;
+    height: 68px;
     width: 993px;
     display: block;
     margin: 0 auto;
@@ -103,6 +103,7 @@ ul.social li.fb a {width: 109px; background: url(../img/buttons/norm_fb.png) no-
 ul.social li.tw a {background: url(../img/buttons/norm_tw.png) no-repeat;}
 ul.social li.gp a {background: url(../img/buttons/norm_gp.png) no-repeat;}
 ul.social li.tum a {background: url(../img/buttons/norm_tum.png) no-repeat;}
+ul.social li.em a {background: url(../img/buttons/norm_em.png) no-repeat;}
 
 .slide {
     width: 990px;
@@ -110,25 +111,25 @@ ul.social li.tum a {background: url(../img/buttons/norm_tum.png) no-repeat;}
     height: 372px;
     background: #000;
 }
-.panel ol li {display: inline-block; padding: 3px; font-size: 11px;}
+.panel ol li {display: inline-block; padding: 3px; font-size: 12px;}
 .panel ol li.active {border: 1px solid white;}
-.panel ol {float: left; margin-right: 20px;}
-.panel .small_arrow {float: left;}
-.panel h2 {clear: both; margin-top: 30px; color: #ff8121; font-size: 17px; line-height: 1.4; margin-bottom: 10px;}
+.panel ol {margin-right: 20px; position: absolute; top: 340px;}
+.panel .small_arrow {padding-left: 3px; padding-right: 13px; position: absolute; top: 340px; margin-left: 130px;}
+.panel .small_arrow span {padding-left: 8px;}
+.panel h2 {clear: both; color: #ff8121; font-size: 17px; line-height: 1.4; margin-bottom: 10px;}
 .panel p {margin-bottom: 10px;}
 
-.panel .sharing {position: absolute; top: 390px;}
+.panel .sharing {position: absolute; top: 370px;}
 
 .panel h5 {font-size: 12px; font-weight: normal; margin-bottom: 3px; color: #aabbdd;}
 
 .panel ul.share li {display: inline;}
-ul.share li a {width: 30px; height: 30px; display: inline-block; text-indent: -9999px;}
+ul.share li a {width: 30px; height: 30px; display: inline-block; text-indent: -9999px; margin-right: 5px;}
 ul.share li.fb a {background: url(../img/buttons/small_fb.png) no-repeat;}
 ul.share li.tw a {background: url(../img/buttons/small_tw.png) no-repeat;}
 ul.share li.gp a {background: url(../img/buttons/small_gp.png) no-repeat;}
 ul.share li.tum a {background: url(../img/buttons/small_tum.png) no-repeat;}
-
-
+ul.share li.em a {background: url(../img/buttons/small_em.png) no-repeat;}
 
 .panel {
     background: url(../img/panel_background.png) no-repeat;
@@ -165,6 +166,91 @@ ul.share li.tum a {background: url(../img/buttons/small_tum.png) no-repeat;}
     width: 991px;
     margin: 0 auto;
     margin-top: 40px;
+}
+
+.wow_hdr {
+	margin: 0 auto;
+    width: 1007px;
+    height: 115px;
+    background: url(../img/wow_hdr.png) no-repeat;
+	clear: both;
+}
+
+.wow_main {
+	margin: 0 auto;
+	width: 1007px;
+	background: url(../img/wow_main.png);
+	overflow: auto;
+	color: #2a2a2a;
+}
+
+.wow_main h2 {
+	height: 55px;
+	background: url(../img/video_background.png) no-repeat left;
+	padding-left: 55px;
+	font-size: 22px;
+	color: #2a2a2a;
+}
+
+.wow_main h3 {
+	padding-left: 55px;
+	margin-top: -25px;
+	font-size: 14px;
+	color: #2a2a2a;
+	margin-bottom: 20px;
+}
+
+.wow_main .right_inside h3 {margin-bottom: 22px;}
+
+.left_inside {
+	float: left;
+	width: 590px;
+	margin-left: 25px;
+	clear: both;
+	min-height: 1500px;
+	margin-top: 30px;
+	background: url(../img/left_inside_background.png) no-repeat right center;
+}
+
+.right_inside {
+	float: right;
+	width: 340px;
+	margin-right: 30px;
+	margin-top: 30px;
+}
+
+.right_inside .divider {background: url(../img/right_divider.png) no-repeat; width: 330px; height: 2px; margin-top: 10px; margin-bottom: 20px;}
+.left_inside .divider {background: url(../img/left_divider.png) no-repeat; width: 537px; height: 6px; margin-top: 20px; margin-bottom: 20px;}
+
+.left_inside .large_button {
+	float: right;
+	margin-right: 40px;
+}
+
+.left_inside h5 {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.left_inside h4 {
+	font-weight: bold;
+	font-size: 30px;
+	margin-top: 20px;
+}
+
+.left_inside ul {margin-left: 40px; margin-top: 20px;}
+.left_inside ul li {list-style-type: disc; font-size: 16px;}
+
+.left_inside .small_arrow {
+	float: right;
+	margin-right: 40px;
+	margin-top: 30px;
+}
+.wow_btm {
+	width: 1007px;
+	height: 26px;
+	background: url(../img/wow_btm.png) no-repeat;
+		margin: 0 auto;
 }
 
 
@@ -223,11 +309,12 @@ ul.share_petition li.tum a {background: url(../img/buttons/wide_tum.png) no-repe
 
 .lows {overflow: auto;}
 
-.lft {float: left; margin-left: 55px; margin-top: 40px;}
-.rght {float: right; margin-right: 55px; margin-top: 40px;}
+.lft {float: left; margin-left: 65px; margin-top: 40px;}
+.rght {float: right; margin-right: 60px; margin-top: 40px;}
 
 .lft .top, .lft .main, .lft .bottom {width: 595px;} 
 .lft .top {background: url(../img/lft_hdr.png) no-repeat; height: 106px;}
+
 .lft .main {background: url(../img/lft_main.png); width: 555px;}
 .lft .bottom {background: url(../img/lft_btm.png) no-repeat; height: 23px;}
 
@@ -263,7 +350,7 @@ ul.share_petition li.tum a {background: url(../img/buttons/wide_tum.png) no-repe
 
 .paparazzi .large_button span {
     text-align: center;
-    width: 130px;
+    width: 120px;
 }
 
 ul.photos {margin-top: 10px;}
@@ -365,11 +452,11 @@ ul.photos li {margin-top: 20px;}
     background: url(../img/large_button_left.png) no-repeat;
     height: 48px;
     display: inline-block;
-    padding-top: 10px;
+    padding-top: 13px;
     padding-left: 20px;
     padding-right: 10px;
     color: #2a2a2a;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     text-shadow: 1px 1px 1px rgba(255,255,255,0.4);

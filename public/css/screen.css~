@@ -15,6 +15,32 @@ body {
     margin-bottom: 100px;
 }
 
+#alternate {background: url(../img/wrap_background_alternate.jpg) no-repeat center -1px #050508;}
+
+.template_content {
+    background: #fff;
+    margin-left: 65px;
+    margin-right: 65px;
+    color: #2a2a2a;
+    line-height: 1.5;
+    font-size: 14px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.template_content h1, 
+.template_content h2, 
+.template_content h3, 
+.template_content h4, 
+.template_content h5, 
+.template_content h6 {font-weight: bold; font-size: 15px;} 
+
+.template_content p {margin-bottom: 10px;}
+.template_content ul,
+.template_content ol {margin-left: 20px;}
+.template_content li {margin-bottom: 10px;}
+
+
 a {color: #ff8321;}
 
 /* HEADER */
@@ -88,7 +114,7 @@ ul.social li.tum a {background: url(../img/buttons/norm_tum.png) no-repeat;}
 .panel ol li.active {border: 1px solid white;}
 .panel ol {float: left; margin-right: 20px;}
 .panel .small_arrow {float: left;}
-.panel h2 {clear: both; margin-top: 30px; color: #ff8121; font-size: 17px; line-height: 1.4; margin-bottom: 10px;}
+.panel h2 {clear: both; color: #ff8121; font-size: 17px; line-height: 1.4; margin-bottom: 10px;}
 .panel p {margin-bottom: 10px;}
 
 .panel .sharing {position: absolute; top: 390px;}
@@ -96,13 +122,12 @@ ul.social li.tum a {background: url(../img/buttons/norm_tum.png) no-repeat;}
 .panel h5 {font-size: 12px; font-weight: normal; margin-bottom: 3px; color: #aabbdd;}
 
 .panel ul.share li {display: inline;}
-ul.share li a {width: 30px; height: 30px; display: inline-block; text-indent: -9999px;}
+ul.share li a {width: 30px; height: 30px; display: inline-block; text-indent: -9999px; margin-right: 5px;}
 ul.share li.fb a {background: url(../img/buttons/small_fb.png) no-repeat;}
 ul.share li.tw a {background: url(../img/buttons/small_tw.png) no-repeat;}
 ul.share li.gp a {background: url(../img/buttons/small_gp.png) no-repeat;}
 ul.share li.tum a {background: url(../img/buttons/small_tum.png) no-repeat;}
-
-
+ul.share li.em a {background: url(../img/buttons/small_em.png) no-repeat;}
 
 .panel {
     background: url(../img/panel_background.png) no-repeat;
