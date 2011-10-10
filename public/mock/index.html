@@ -5,6 +5,8 @@
     <title>Free Bieber: Vote no on S. 978</title>
     <link rel="stylesheet" href="/css/reset.css" type="text/css" />
     <link rel="stylesheet" href="/css/screen.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+    
 </head>
 <body>
 
@@ -148,7 +150,7 @@
 		
 		<div class="divider"></div>
 		
-		<a href="" class="large_button"><span>Launch Biebercam (wig included)</span></a>
+		<a href="/flash/OverlayRecorder.html" class="large_button modal"><span>Launch Biebercam (wig included)</span></a>
 		
 		<h5>Talking points:</h5>
 			<ul>
@@ -287,8 +289,21 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="/js/tweet/jquery.tweet.js"></script>
+	<script type="text/javascript" src="/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+	<script type="text/javascript" src="/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	
 <script type='text/javascript'>
-    jQuery(function($){
+    $(function($){
+
+        $(".modal").fancybox({
+            'autoScale'			: false,
+				'padding'			: 0,
+				'autoScale'			: false,
+            'transitionIn'		: 'none',
+            'transitionOut'		: 'none',
+            'type'				: 'iframe'
+        });
+    
         $(".tweet").tweet({
             query: "#belieber",
             avatar_size: 60,
@@ -296,6 +311,8 @@
             loading_text: "loading tweets..."
         });
     });
+
+    
 </script>
 <script type="text/javascript">
 

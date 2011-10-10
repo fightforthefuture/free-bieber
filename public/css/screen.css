@@ -170,6 +170,7 @@ ul.share li.em a {background: url(../img/buttons/small_em.png) no-repeat;}
 
 .wow_hdr {
 	margin: 0 auto;
+    margin-top: 740px;
     width: 1007px;
     height: 115px;
     background: url(../img/wow_hdr.png) no-repeat;
@@ -295,7 +296,7 @@ h2.center_cta {
     text-align: center;
     display: block;
     clear: both;
-    padding-top: 40px;
+    padding-top: 45px;
 }
 
 ul.share_petition {text-align: center; margin-top: 20px;}
@@ -496,3 +497,4 @@ ul.photos li {margin-top: 20px;}
 .footer .nav li a {padding-left: 5px; padding-right: 10px; padding-left: 10px; border-left: 1px solid #fff;}
 .footer .nav li.first a {border-left: none;}
 .footer .copyleft {font-size: 14px;}
+
