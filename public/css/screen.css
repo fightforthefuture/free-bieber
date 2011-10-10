@@ -33,7 +33,50 @@ a {color: #ff8321;}
     height: 203px;
     width: 991px;
     margin: 0 auto;
+    color: #2a2a2a;
+    text-align: center;
 }
+
+.signup h2 {font-size: 21px; font-weight: bold; padding-top: 20px;} 
+
+.signup p {font-size: 16px;}
+
+.signup form {margin: 0 auto; width: 522px; padding-top: 20px; margin-bottom: 20px;}
+
+.signup input {
+    background: url(../img/form_email.png) no-repeat; 
+    width: 309px; 
+    height: 42px; 
+    border: 0; 
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    color: #a9a9a9;
+    font-size: 22px;
+    padding-left: 15px;
+    float: left;
+}
+
+.signup button {
+    background: url(../img/form_button.png) no-repeat;
+    width: 198px;
+    height: 42px;
+    border: 0;
+    padding: 0;
+    text-indent: -9999px;
+    float: left;
+}
+
+.signup ul.social {margin-top: 60px; clear: both;}
+
+.signup ul.social li {display: inline; padding-left: 3px; padding-right: 3px;}
+
+.signup ul.social li a {text-indent: -9999px; display: inline-block; width: 90px; height: 31px;}
+
+ul.social li.fb a {width: 109px; background: url(../img/buttons/norm_fb.png) no-repeat;}
+ul.social li.tw a {background: url(../img/buttons/norm_tw.png) no-repeat;}
+ul.social li.gp a {background: url(../img/buttons/norm_gp.png) no-repeat;}
+ul.social li.tum a {background: url(../img/buttons/norm_tum.png) no-repeat;}
 
 .slide {
     width: 990px;
@@ -41,12 +84,34 @@ a {color: #ff8321;}
     height: 372px;
     background: #000;
 }
+.panel ol li {display: inline-block; padding: 3px; font-size: 11px;}
+.panel ol li.active {border: 1px solid white;}
+.panel ol {float: left; margin-right: 20px;}
+.panel .small_arrow {float: left;}
+.panel h2 {clear: both; margin-top: 30px; color: #ff8121; font-size: 17px; line-height: 1.4; margin-bottom: 10px;}
+.panel p {margin-bottom: 10px;}
+
+.panel .sharing {position: absolute; top: 390px;}
+
+.panel h5 {font-size: 12px; font-weight: normal; margin-bottom: 3px; color: #aabbdd;}
+
+.panel ul.share li {display: inline;}
+ul.share li a {width: 30px; height: 30px; display: inline-block; text-indent: -9999px;}
+ul.share li.fb a {background: url(../img/buttons/small_fb.png) no-repeat;}
+ul.share li.tw a {background: url(../img/buttons/small_tw.png) no-repeat;}
+ul.share li.gp a {background: url(../img/buttons/small_gp.png) no-repeat;}
+ul.share li.tum a {background: url(../img/buttons/small_tum.png) no-repeat;}
+
+
 
 .panel {
     background: url(../img/panel_background.png) no-repeat;
     float: right;
-    width: 289px;
-    height: 372px;
+    width: 229px;
+    height: 352px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-right: 30px;
 }
 
 .recently {
@@ -81,32 +146,33 @@ a {color: #ff8321;}
     width: 225px;
     float: left;
     margin-bottom: 35px;
+    height: 170px;
+    font-size: 12px;
+    line-height: 1.7;
 }
 
-.primary .spot {padding-right: 5px;}
+.primary .spot {padding-right: 30px; width: 195px;}
 
 .secondary .spot {padding-left: 35px;}
 
-.spot h3 {
+.primary h3, .spot h3 {
     color: #ff8321; 
     font-size: 17px;
     font-weight: bold;
     line-height: 1.3;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .felony {
     width: 427px;
     height: 272px;
     background: black;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     margin-right: 40px;
     float: left;
 }
 
 .primary {
-    background: white;
     overflow: auto;
     width: 450px;
     float: left;
@@ -154,7 +220,7 @@ ul.share_petition li.tum a {background: url(../img/buttons/wide_tum.png) no-repe
     padding-left: 20px;
 }
 
-.block h4 {
+.block .top h4 {
     color: #fff;
     font-size: 14px;
     padding-left: 20px;
@@ -164,7 +230,152 @@ ul.share_petition li.tum a {background: url(../img/buttons/wide_tum.png) no-repe
 .block .main {
     padding-left: 20px;
     padding-right: 20px;
+    overflow: hidden;
 }
+
+.paparazzi .main {padding-top: 20px;}
+
+.paparazzi .large_button span {
+    text-align: center;
+    width: 130px;
+}
+
+ul.photos {margin-top: 10px;}
+
+ul.photos .caption {margin-top: -5px; margin-left: 10px; font-weight: bold;}
+
+ul.photos li {margin-top: 20px;}
+
+.paparazzi .small_arrow {float: right; margin-right: 20px;}
+
+.idea {background: url(../img/idea_seperator.png) no-repeat top; padding-top: 20px; clear: both; margin-top: 40px;}
+
+.idea h4 {font-weight: bold; font-size: 20px;}
+
+.idea h5 {font-size: 16px; margin-bottom: 15px;}
+
+.idea ul li {
+    background: url(../img/tweet_divider.png) no-repeat bottom center; 
+    padding-bottom: 15px;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.cam .main {padding-top: 20px;}
+.cam .large_button, .cam .small_arrow {float: right; margin-right: 10px;}
+.cam .small_arrow {margin-top: -25px;}
+.cam .description {float: left; margin-bottom: 50px; margin-left: 10px;}
+.cam ul {margin-left: 18px; margin-top: 10px;}
+.cam ul li {list-style-type: disc; padding-left: 0px;}
+
+.cam .main h4 {
+    font-size: 20px;
+    font-weight: normal;
+    clear: both;
+    width: 300px;
+    margin-left: 10px;
+}
+
+.cam h5 {
+    font-size: 16px;
+}
+
+.shirt {
+    float: left;
+    width: 277px;
+    background: url(../img/shirt_divider.png) no-repeat right;
+}
+
+.shirt img {margin-left: 30px;}
+.sticker img {margin-left: 70px;}
+
+.sticker {
+    float: right;
+    width: 260px;
+}
+
+.sticker .description, .shirt .description {
+    background: url(../img/description_background.png) no-repeat;
+    width: 228px;
+    height: 71px;
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.description h5 {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.description p {
+    font-size: 13px;
+    padding-top: 5px;
+}
+
+.small_arrow span {
+    background: url(../img/small_arrow_left.png) no-repeat;
+    height: 26px;
+    display: inline-block;
+    padding-top: 4px;
+    padding-left: 20px;
+    color: #1b1b28;
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.4);
+}
+
+.small_arrow {
+    background: urL(../img/small_arrow_right.png) no-repeat right;
+    height: 26px;
+    display: inline-block;
+    padding-right: 24px;
+    cursor: pointer;
+}
+
+.large_button span {
+    background: url(../img/large_button_left.png) no-repeat;
+    height: 48px;
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+    color: #2a2a2a;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.4);
+}
+
+.large_button {
+    background: url(../img/large_button_right.png) no-repeat right;
+    height: 48px;
+    display: inline-block;
+    padding-right: 11px;
+    cursor: pointer;
+}
+
+.merch .small_arrow {float: right; margin-top: 30px; margin-right: 10px;}
+
+.tweet_list li {
+    margin-left: -12px; 
+    width: 370px; 
+    background: url(../img/tweet_divider.png) no-repeat bottom center; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: auto;
+}
+
+.tweet_list li:last-child {background: none;}
+
+.tweet_avatar {
+    margin-left: 25px;
+    float: left;
+}
+
+.tweet_time, .tweet_text {width: 250px; margin-right: 20px;float: right; clear: right;}
 
 .footer {text-align: center; border-top: 1px dotted #fff; padding-top: 50px; padding-bottom: 50px; margin-left: 65px; margin-right: 65px;}
 .footer .nav {margin-bottom: 20px;}
