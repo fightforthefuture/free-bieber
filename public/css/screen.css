@@ -21,6 +21,9 @@ body {
     background: #fff;
     margin-left: 65px;
     margin-right: 65px;
+    color: #2a2a2a;
+    line-height: 1.5;
+    font-size: 14px;
 }
 
 a {color: #ff8321;}
