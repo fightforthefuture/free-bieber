@@ -15,14 +15,6 @@ body {
     margin-bottom: 100px;
 }
 
-#alternate {background: url(../img/wrap_background_alternate.jpg) no-repeat center -1px #050508;}
-
-.template_content {
-    background: #fff;
-    margin-left: 65px;
-    margin-right: 65px;
-}
-
 a {color: #ff8321;}
 
 /* HEADER */
