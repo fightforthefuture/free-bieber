@@ -59,6 +59,8 @@
         <button>Free Bieber</button>
     </form>
 
+    <div id="messageajax"></div>
+
     <ul class="social">
         <li class="fb"><a href="">Facebook</a></li>
         <li class="tw"><a href="">Twitter</a></li>
@@ -82,7 +84,7 @@
     <div class="primary">
         <h3>Should this be a felony? Should it be illegal at all?</h3>
         <div class="video felony">
-        <iframe width="427" height="247" src="http://www.youtube.com/embed/o_vb42otPiA?rel=0" frameborder="0" allowfullscreen></iframe>
+        <iframe width="427" height="247" src="http://www.youtube.com/embed/o_vb42otPiA?wmode=opaque&rel=0" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <div class="spot">
@@ -289,8 +291,8 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="/js/tweet/jquery.tweet.js"></script>
-	<script type="text/javascript" src="/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
-	<script type="text/javascript" src="/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 	
 <script type='text/javascript'>
     $(function($){
@@ -308,9 +310,12 @@
             count: 4,
             loading_text: "loading tweets..."
         });
-    });
 
+        
     
+
+});
+
 </script>
 <script type="text/javascript">
 
