@@ -11,6 +11,7 @@
         a.large_button {float: left;}
 		</style>
 	</head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     
 <script type="text/javascript" src="swfobject.js"></script>
 
@@ -86,6 +87,7 @@
 
 		}
 		function getMovieName(movieName) { if (navigator.appName.indexOf("Microsoft") != -1) { return window[movieName] } else { return document[movieName] } }
+        $('#startRecording').click(startRecording());
 		
 	</script>
 	<body>
@@ -95,6 +97,7 @@
 			<div id="flashContent">
 			</div>
             <div id="navigation1" style="visibility:hidden;float:left;position:relative">
+                <button id="startRecording">Record</button>
                 <a href="javascript:startRecording()" class="large_button"><span>Record</span></a>
                 <a href="javascript:pauseRecording()" class="large_button"><span>Pause Recording</span></a>
                 <a href="javascript:resetRecording()" class="large_button"><span>Reset Recording</span></a>
