@@ -6,8 +6,9 @@
         <link rel="stylesheet" href="/css/reset.css" type="text/css" />
         <link rel="stylesheet" href="/css/screen.css" type="text/css" />
 		<style type="text/css" media="screen">
-		#flashContent {width:480px;height:360px; margin-left: 20px; margin-top: 20px;}
-		#bodydiv {width:100%; height:100%; }
+		#flashContent {width:480px;height:360px;}
+		#bodydiv {width:100%; height:100%; padding: 20px;}
+        a.large_button {float: left;}
 		</style>
 	</head>
     
@@ -49,18 +50,27 @@
 			x.style.visibility = "hidden";
 			
 			swf.startRecording(); 
+			var x=document.getElementById("recording");
+			x.style.visibility = "visible";
+
 		}
 		function pauseRecording() 
 		{
 			var x=document.getElementById("navigation2");
 			x.style.visibility = "visible";
 			swf.pauseRecording(); 
+			var x=document.getElementById("recording");
+			x.style.visibility = "hidden";
+
 		}
 		function resetRecording() 
 		{ 
 			var x=document.getElementById("navigation2");
 			x.style.visibility = "hidden";
 			swf.resetRecording(); 
+			var x=document.getElementById("recording");
+			x.style.visibility = "hidden";
+
 		}
 		function publishRecording() 
 		{ 
@@ -69,23 +79,29 @@
 		function previewRecording() 
 		{ 
 			swf.previewRecording(); 
+			var x=document.getElementById("recording");
+			x.style.visibility = "hidden";
+
+
+
 		}
 		function getMovieName(movieName) { if (navigator.appName.indexOf("Microsoft") != -1) { return window[movieName] } else { return document[movieName] } }
 		
 	</script>
 	<body>
 	<div id="bodydiv" align="center" style="width:100%;height:100%;">
+    <div id="recording" style="background: red; width: 100px; height: 100px; position: absolute; z-index: 9; background: url(/img/recording.png) no-repeat; left: 25px; top: 25px; visibility: hidden;"></div>
 		<div id="flash"  style="float:left;position:absolute; width:480px;height:360px;">
 			<div id="flashContent">
 			</div>
-            <div id="navigation1" style="visibility:hidden;float:left;position:relative">
-                <a href="javascript:startRecording()" class="large_button"><span>Record</span></a><br/><br/>
-                <a href="javascript:pauseRecording()" class="large_button"><span>Pause Recording</span></a><br/><br/>
-                <a href="javascript:resetRecording()" class="large_button"><span>Reset Recording</span></a><br/><br/>
-                <a href="javascript:publishRecording()" class="large_button"><span>Publish</span></a><br/><br/>
+            <div id="navigation1" style="visibility:visible;float:left;position:relative">
+                <a href="javascript:startRecording()" class="large_button"><span>Record</span></a>
+                <a href="javascript:pauseRecording()" class="large_button"><span>Pause Recording</span></a>
+                <a href="javascript:resetRecording()" class="large_button"><span>Reset Recording</span></a>
+                <a href="javascript:publishRecording()" class="large_button"><span>Publish</span></a><br/>
 			</div>
             <div id="navigation2" style="visibility:hidden;float:left;position:relative">
-                <a href="javascript:previewRecording()" class="large_button"><span>Preview Recording</span></a><br/><br/>
+                <a href="javascript:previewRecording()" class="large_button"><span>Preview Recording</span></a>
 			</div>
 		</div>
         <div id="status"></div>
@@ -99,6 +115,7 @@
 		so.addParam("showmenu", "false");
 		so.addParam("allowScriptAccess", "always");
 		so.addParam("flashvars", "overlayimage=http://joshuablount.com/media/bars.png&filename=random");
+        so.addParam("wmode", "opaque");
 		so.write("flashContent"); 
     </script> 
 	</body>
