@@ -41,6 +41,7 @@
 				ExternalInterface.addCallback("pauseRecording",pauseRecording1);
 				ExternalInterface.addCallback("resetRecording",resetRecording1);
 				ExternalInterface.addCallback("publishRecording",publishRecording1);
+				ExternalInterface.addCallback("previewRecording",previewRecording1);
 			}
 			view.stop();
 			var v:VideoRecord	=	new VideoRecord();
@@ -74,28 +75,40 @@
 		{
 			sendNotification(Application.RESET);
 		}
-		private function publishRecording1(params = null ):void
+		private function previewRecording1(params = null ):void
+		{
+			sendNotification(Application.PREVIEW);
+		}
+		
+		private function publishRecording1( user = "", pass = "" ):void
 		{
 			sendNotification(Application.PUBLISH);
 			
 			var dp:DataProxy	=	facade.retrieveProxy(DataProxy.NAME) as DataProxy;
-			dp.publishVideo()
+			dp.publishVideo(user, pass)
 		}
 		//
 		override public function listNotificationInterests():Array
 		{
 			//list notification
-			return [ VideoRecordEvent.MEDIA_READY, VideoRecordEvent.MEDIA_UPDATE ]
+			return [ VideoRecordEvent.MEDIA_READY, VideoRecordEvent.MEDIA_UPDATE,VideoRecordEvent.MEDIA_PUBLISHING,VideoRecordEvent.MEDIA_PUBLISHED ]
 		}
 		override public function handleNotification(note:INotification):void
 		{
 			switch(note.getName())
 			{
 				case VideoRecordEvent.MEDIA_READY:
+					ExternalInterface.call("mediaReady");
 					attachOverlay();
 					break;
 				case VideoRecordEvent.MEDIA_UPDATE:
 					ExternalInterface.call("mediaProgress",note.getBody().mediaPosition);
+					break;
+				case VideoRecordEvent.MEDIA_PUBLISHING:
+					ExternalInterface.call("mediaSaving");
+					break;
+				case VideoRecordEvent.MEDIA_PUBLISHED:
+					ExternalInterface.call("mediaSaved");
 					break;
 			}
 		}

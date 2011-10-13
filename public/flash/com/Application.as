@@ -21,6 +21,7 @@
 		public static const PAUSE:String	=	"PAUSE" ;
 		public static const RESET:String	=	"RESET";
 		public static const PUBLISH:String	=	"PUBLISH";
+		public static const PREVIEW:String	=	"PREVIEW";
 		public static const PUBLISH_STATUS:String	=	"PUBLISH_STATUS";
 		public function Application() 
 		{

@@ -4,30 +4,34 @@
 		<title>OverlayRecorder</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<style type="text/css" media="screen">
-		#flashContent { margin-top: 40px; width:480px;height:360px; margin-bottom: 20px;}
+		#flashContent {width:480px;height:360px;}
 		#bodydiv {width:100%; height:100%; }
 		</style>
-    <link rel="stylesheet" href="/css/reset.css" type="text/css" />
-    <link rel="stylesheet" href="/css/screen.css" type="text/css" />
-
 	</head>
     
-<script type="text/javascript" src="/flash/swfobject.js"></script>
+<script type="text/javascript" src="swfobject.js"></script>
 
 	<script>
 		/* This function will be called from flash after flash preloaded and it loded the overlay image */
+		var swf;
 		function onLoad()
 		{
-			var x=document.getElementById("navigation");
-			x.style.visibility = "visible";
-            initRecording();
+			swf = getMovieName('OverlayRecorder');
+			initRecording() 
 			
 		}
-		function debugRecording(value)
+		function debugRecording(value) 	{ /*window.alert(value);*/	 }
+		
+		//This is called from flash, after this only we can allow interaction
+		function mediaReady()
 		{
-			//window.alert(value);	
+			var x=document.getElementById("navigation1");
+			x.style.visibility = "visible";
 		}
 		//this function called from flash and it will show you the progress. It will just dispatched the current media position only.
+		
+		function mediaSaving(value){var x=document.getElementById("status"); x.innerHTML = "Saving"}
+		function mediaSaved(value){var x=document.getElementById("status"); x.innerHTML = "Saved"}
 		function mediaProgress(value){}
 		function publishProgress(status,percent,transferred,total,speed){ var x=document.getElementById("status"); x.innerHTML = "status > " +status + " :: percent > " +percent + " :: transferred > " +transferred + " :: total > " +total + " :: speed > " +speed  }
 		function publishStatus(status){ var x=document.getElementById("status"); x.innerHTML = status  }
@@ -35,43 +39,51 @@
 		//following are function call to flash object
 		function initRecording() 
 		{
-			var x=getMovieName('OverlayRecorder');
-			x.initRecording(); 
+			swf.initRecording(); 
 		}
 		function startRecording() 
 		{ 
-			var x=getMovieName('OverlayRecorder');
-			x.startRecording(); 
+			var x=document.getElementById("navigation2");
+			x.style.visibility = "hidden";
+			
+			swf.startRecording(); 
 		}
 		function pauseRecording() 
 		{
-			var x=getMovieName('OverlayRecorder');
-			x.pauseRecording(); 
+			var x=document.getElementById("navigation2");
+			x.style.visibility = "visible";
+			swf.pauseRecording(); 
 		}
 		function resetRecording() 
 		{ 
-			var x=getMovieName('OverlayRecorder');
-			x.resetRecording(); 
+			var x=document.getElementById("navigation2");
+			x.style.visibility = "hidden";
+			swf.resetRecording(); 
 		}
 		function publishRecording() 
 		{ 
-			var x=getMovieName('OverlayRecorder');
-			x.publishRecording(); 
+			swf.publishRecording(); 
 		}
-		
+		function previewRecording() 
+		{ 
+			swf.previewRecording(); 
+		}
 		function getMovieName(movieName) { if (navigator.appName.indexOf("Microsoft") != -1) { return window[movieName] } else { return document[movieName] } }
 		
 	</script>
 	<body>
 	<div id="bodydiv" align="center" style="width:100%;height:100%;">
-		<div id="flash"  style="width:480px;height:360px;">
+		<div id="flash"  style="float:left;position:absolute; width:480px;height:360px;">
 			<div id="flashContent">
 			</div>
-            <div id="navigation" style="visibility:hidden;">
-
-                <a href="javascript:startRecording()" class="large_button"><span>Record</span></a>
-                <a href="javascript:pauseRecording()" class="large_button"><span>Pause</span></a>
-                <a href="javascript:publishRecording()" class="large_button"><span>Publish</span></a>
+            <div id="navigation1" style="visibility:hidden;float:left;position:relative">
+                <a href="javascript:startRecording()">startRecording</a><br/><br/>
+                <a href="javascript:pauseRecording()">pauseRecording</a><br/><br/>
+                <a href="javascript:resetRecording()">resetRecording</a><br/><br/>
+                <a href="javascript:publishRecording()">publishRecording</a><br/><br/>
+			</div>
+            <div id="navigation2" style="visibility:hidden;float:left;position:relative">
+                <a href="javascript:previewRecording()">previewRecording</a><br/><br/>
 			</div>
 		</div>
         <div id="status"></div>

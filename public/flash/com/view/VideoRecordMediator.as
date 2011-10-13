@@ -11,8 +11,10 @@
 
 	public class VideoRecordMediator extends Mediator
 	{
-		public static const NAME:String = "VideoRecordMediator";
-
+		public static const NAME	:	String 	= 	"VideoRecordMediator";
+		
+		private var isSaving:Boolean	=	false;
+		private var isPublishing:Boolean=	false;
 		public function VideoRecordMediator( viewComponent:VideoRecord )
 		{
 			super(NAME, viewComponent);
@@ -50,16 +52,19 @@
 		}
 		private function onMediaPublished(e:Event):void
 		{
-			sendNotification(VideoRecordEvent.MEDIA_PUBLISHED,view);
+			if(isSaving)view.previewRecording(DataProxy.filename);
+			else if(isPublishing) sendNotification(VideoRecordEvent.MEDIA_PUBLISHED,view);
 		}
 		//notifications
 		override public function listNotificationInterests():Array
 		{
 			//list notification
-			return [ Application.START,Application.RECORD,Application.PAUSE,Application.PUBLISH,Application.RESET ];
+			return [ Application.START,Application.RECORD,Application.PAUSE,Application.PUBLISH,Application.RESET ,Application.PREVIEW ];
 		}
 		override public function handleNotification(note:INotification):void
 		{
+			isSaving = false;
+			isPublishing = false;
 			switch (note.getName())
 			{
 				case Application.START :
@@ -72,6 +77,11 @@
 					view.pauseRecording();
 					break;
 				case Application.PUBLISH :
+					isPublishing = true;
+					view.publishRecording();
+					break;
+				case Application.PREVIEW:
+					isSaving = true;
 					view.publishRecording();
 					break;
 				case Application.RESET:

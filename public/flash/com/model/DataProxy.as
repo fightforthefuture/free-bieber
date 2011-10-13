@@ -16,6 +16,7 @@
 	import flash.events.IOErrorEvent;
 	import flash.events.SecurityErrorEvent;
 	import flash.events.HTTPStatusEvent;
+	import flash.net.URLRequestMethod;
 	
 	public class DataProxy extends Proxy
 	{
@@ -99,14 +100,17 @@
 			am.startApp();
 		}
 		//publish call
-		public function publishVideo():void
+		public function publishVideo(user = "", pass = ""):void
 		{
 			var uv:URLVariables	=	new URLVariables();
 			uv.file				=	DataProxy.filename;
 			uv.image			=	DataProxy.overlayimage;
 			uv.ip 				= 	Global.SERVER;
+			uv.user				=	user;
+			uv.pass				=	pass;
 			//
 			pUR.data			=	uv;
+			pUR.method			=	URLRequestMethod.POST
 			pUR.url				=	Global.HTTP + Global.SERVER + ":" + Global.PORT+ "/" + Global.PUBLISH;
 			//
 			pUL.dataFormat		=	URLLoaderDataFormat.VARIABLES;
