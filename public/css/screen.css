@@ -111,8 +111,9 @@ ul.social li.em a {background: url(../img/buttons/norm_em.png) no-repeat;}
     height: 372px;
     background: #000;
 }
-.panel ol li {display: inline-block; padding: 3px; font-size: 12px;}
-.panel ol li.active {border: 1px solid white;}
+.panel ol li {display: inline-block;}
+.panel ol li a {display: inline-block; padding: 3px; font-size: 12px;}
+.panel ol li a.active {border: 1px solid white;}
 .panel ol {margin-right: 20px; position: absolute; top: 340px;}
 .panel .small_arrow {padding-left: 3px; padding-right: 13px; position: absolute; top: 340px; margin-left: 130px;}
 .panel .small_arrow span {padding-left: 8px;}
@@ -498,3 +499,54 @@ ul.photos li {margin-top: 20px;}
 .footer .nav li.first a {border-left: none;}
 .footer .copyleft {font-size: 14px;}
 
+#detailer {
+    position: absolute;
+    background: red; 
+    solid #fff; 
+    height: 50px;
+    margin-top: 60px; 
+    display: none;
+    background: #dbdbdb;
+    width: 528px;
+}
+
+#detailer input {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px;
+    width: 149px;
+    height: 15px;
+    background: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #666;
+    margin-right: 5px;
+}
+
+
+/* SLIDESHOW */
+
+.slides {
+    overflow: hidden;
+    width: 701px;
+    height: 371px;
+    position: relative;
+}
+
+.slideImages {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slideImages li img {
+    float: left;
+}
+
+.slideText {
+    overflow: hidden;
+    height: 200px;
+}
+
+ol.nav li a {cursor:pointer;}

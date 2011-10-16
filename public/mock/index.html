@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<! Just testing >
-
 <html>
 <head>
     <title>Free Bieber: Vote no on S. 978</title>
     <link rel="stylesheet" href="/css/reset.css" type="text/css" />
     <link rel="stylesheet" href="/css/screen.css" type="text/css" />
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="/js/jquery.hashchange.min.js"></script>
     <script src="http://cdn.optimizely.com/js/11189875.js"></script>
-<link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
-    
+    <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
 </head>
+
 <body>
 
 <div class="wrap">
@@ -20,15 +19,48 @@
 
 <div class="slide">
     <div class="panel">
-    <h2>Could This Really Happen?</h2>
+        <div class="slideText">
+            <div class="one">
+                <h2>Could This Really Happen?</h2>
+             
+                <p>Congress is about to vote on a bill that would make posting videos of songs and other content a felony -- with up to 5 years in prison.</p> 
+                <p>But wait... didn't Justin Bieber get famous by posting YouTube 
+            videos of him singing copyrighted songs? That's right, he certainly did,
+             and those videos are still on his YouTube account. If this bill passes,
+             he'll be committing a felony, and he could get 5 years in jail.</p>
+            </div>
+            <div class="two">
+                <h2>The Prosecution's case</h2>
+                <p>Once Congress passed S. 978, harmless uses of copyrighted work with more than 10 views became potential felonies: clips, background music, cover songs.
+                </p>
+                <p>Prosecutors proved Bieber benefited commercially, and that was easy--the videos advanced his music career. The defense claimed <a href="http://en.wikipedia.org/ wiki/Fair_use">fair use</a>, but the judge, disagreeing, handed down the maximum sentence: 5 years.
+                </p>    
+            </div>
 
-    <p>make posting videos of songs and other content a felony -- with up to 5 years in prison.</p> 
-    <p>But wait... didn't Justin Bieber get famous by posting YouTube videos of him singing copyrighted songs? That's right, he certainly did, and those videos are still on his YouTube account. If this bill passes, he'll be committing a felony, and he could get 5 years in jail.</p>
-    <ol class="nav">
-        <li>1</li>
-        <li class="active">2</li>
-        <li>3</li>
-        <li>4</li>
+            <div class="three">
+                <h2>Bieber arrested</h2>
+                <p>Just after 3pm PST, Bieber posted to his Twitter account, "OMG-- LAPD at house, want to arrest bieb re: neyo songs PLS RT!!"</p>
+                <p>By 3:12pm, a now-routine "singing online" arrest had become a full-scale tweenage riot, and a SWAT team was deployed to extract Bieber from throngs of small but enraged fans.</p>
+                <p>Three officers were bitten in ensuing violence, one was hospitalized.</p>
+                             
+            </div>
+
+
+            <div class="four">
+                <h2>Selena Gomez visitation</h2>
+                <p>Bieber girlfriend Selena Gomez made an appearance during Tuesday’s visiting
+                hours to show support for the jailed pop star.</p>
+                <p>The <a href=”show javascript dialog: Seriously, you clicked on that?”>Wizards of Waverly Place</a> star herself is facing charges over an unauthorized dressing room version of Superbass by rapper Nicki Minaj.
+                <p>When asked if she regretted recording the video, Gomez responded, “Oh f--- no, I killed that s---.”</p>
+                             
+            </div>
+        </div>
+
+   <ol class="nav">
+        <li><a hre="#" rel="1">1</a></li>
+        <li><a hre="#" rel="2">2</a></li>
+        <li><a hre="#" rel="3">3</a></li>
+        <li><a hre="#" rel="4">4</a></li>
     </ol>
     <a href="" class="small_arrow"><span>Next Photo</span></a>
 
@@ -47,8 +79,11 @@
         </div><!-- close .panel -->
 
     <div class="slides">
-    <ul>
-    <li><img src="/img/slides/1.png" /></li>
+    <ul class="slideImages">
+        <li><img src="/img/slides/1.png" /></li>
+        <li><img src="/img/slides/2.png" /></li>
+        <li><img src="/img/slides/3.png" /></li>
+        <li><img src="/img/slides/1.png" /></li>
     </ul>
     </div><!-- close .slides -->
 </div><!-- close .slide -->
@@ -59,7 +94,12 @@
 
     <form name="signup" action="http://action.freebieber.org/page/signup/external-form-name" method="post" id="signup">
     <form>
-        <input placeholder="Email Address" type="email" name="email">
+        <input placeholder="Email Address" type="email" name="email" id="emailer" />
+        <div id="detailer">
+            <input placeholder="First" />
+            <input placeholder="Last" />
+            <input placeholder="Zip" />
+        </div>
         <button>Free Bieber</button>
     </form>
 
@@ -156,7 +196,7 @@
 		
 		<div class="divider"></div>
 		
-		<a href="/flash/OverlayRecorder.html" class="large_button modal"><span>Launch Biebercam (wig included)</span></a>
+		<a href="/flash/OverlayRecorder.html" class="large_button modal" id="bierbercam"><span>Launch Biebercam (wig included)</span></a>
 		
 		<h5>Talking points:</h5>
 			<ul>
@@ -296,16 +336,23 @@
 <script src="/js/tweet/jquery.tweet.js"></script>
 <script type="text/javascript" src="/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
 <script type="text/javascript" src="/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="/js/script.js"></script>
 	
 <script type='text/javascript'>
     $(function($){
+        $('#emailer').focus(function() {
+            $('#detailer').slideDown();
+        });
 
         $(".modal").fancybox({
             'height': '100',
             'transitionIn'		: 'none',
             'transitionOut'		: 'none',
             'type'				: 'iframe'
-        });
+        }
+
+
+);
     
         $(".tweet").tweet({
             query: "#belieber",
@@ -313,10 +360,6 @@
             count: 4,
             loading_text: "loading tweets..."
         });
-
-        
-    
-
 });
 
 </script>
