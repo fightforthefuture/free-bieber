@@ -16,7 +16,7 @@
 <script type="text/javascript" src="swfobject.js"></script>
 
 	<script>
-		/* This function will be called from flash after flash preloaded and it loded the overlay image */
+	/* This function will be called from flash after flash preloaded and it loded the overlay image */
 		var swf;
 		function onLoad()
 		{
@@ -24,7 +24,7 @@
 			initRecording() 
 			
 		}
-		function debugRecording(value) 	{ /*window.alert(value);*/	 }
+		function debugRecording(value) 	{ var x=document.getElementById("status1"); x.innerHTML = value 	 }
 		
 		//This is called from flash, after this only we can allow interaction
 		function mediaReady()
@@ -39,7 +39,8 @@
 		function mediaProgress(value){}
 		function publishProgress(status,percent,transferred,total,speed){ var x=document.getElementById("status"); x.innerHTML = "status > " +status + " :: percent > " +percent + " :: transferred > " +transferred + " :: total > " +total + " :: speed > " +speed  }
 		function publishStatus(status){ var x=document.getElementById("status"); x.innerHTML = status  }
-		function publishFinished(){ var x=document.getElementById("status"); x.innerHTML = "Finished" }
+		function publishFinished(link){ var x=document.getElementById("status"); x.innerHTML = link; }
+		function publishError(error){ var x=document.getElementById("status"); x.innerHTML = error }
 		//following are function call to flash object
 		function initRecording() 
 		{
@@ -49,29 +50,20 @@
 		{ 
 			var x=document.getElementById("navigation2");
 			x.style.visibility = "hidden";
-			
+            $('#recording').show();			
 			swf.startRecording(); 
-			var x=document.getElementById("recording");
-			x.style.visibility = "visible";
-
 		}
 		function pauseRecording() 
 		{
 			var x=document.getElementById("navigation2");
 			x.style.visibility = "visible";
 			swf.pauseRecording(); 
-			var x=document.getElementById("recording");
-			x.style.visibility = "hidden";
-
 		}
 		function resetRecording() 
 		{ 
 			var x=document.getElementById("navigation2");
 			x.style.visibility = "hidden";
 			swf.resetRecording(); 
-			var x=document.getElementById("recording");
-			x.style.visibility = "hidden";
-
 		}
 		function publishRecording() 
 		{ 
@@ -80,18 +72,8 @@
 		function previewRecording() 
 		{ 
 			swf.previewRecording(); 
-			var x=document.getElementById("recording");
-			x.style.visibility = "hidden";
-
-
-
 		}
 		function getMovieName(movieName) { if (navigator.appName.indexOf("Microsoft") != -1) { return window[movieName] } else { return document[movieName] } }
-        $('#recordNow').click(function() {
-            startRecording();
-        }
-        
-        );
 		
 	</script>
 	<body>
