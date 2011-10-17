@@ -147,7 +147,7 @@
 		
 		//PUBLIC
 		public function get mediaPosition():Number{return  _recordedTime + stream.time;}
-		public function startRecording(value:String="test"){ExternalInterface.call("debugRecording",state);closePlayBack();stream.attachCamera(yourCam);stream.attachAudio(yourMic);stream.publish(value,state);startTrackProgress(true);}
+		public function startRecording(value:String="test"){closePlayBack();stream.attachCamera(yourCam);stream.attachAudio(yourMic);stream.publish(value,state);startTrackProgress(true);}
 		
 		public function publishRecording()
 		{

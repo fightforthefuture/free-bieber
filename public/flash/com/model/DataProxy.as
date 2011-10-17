@@ -123,7 +123,7 @@
 			pUL.removeEventListener(Event.COMPLETE,onVideoStatus)
 			var id:String		=	pUL.data.id;
 			var error:String	=	pUL.data.error;
-			ExternalInterface.call("debugRecording",id + " >> " + error);
+			//ExternalInterface.call("debugRecording",id + " >> " + error);
 			if(!error)
 			{	
 				pID = id;
@@ -145,10 +145,17 @@
 		private function onVideoPublishStatus(e:Event):void
 		{
 			var xml				=	new XML(pUL.data);
-			var status:String		=	xml.status.toString();
+			var status:String	=	xml.status.toString();
+			//ExternalInterface.call("debugRecording",status);
 			if(status == "finished")
 			{
-				ExternalInterface.call("publishFinished");
+				var link	=	xml.links.link.toString();
+				ExternalInterface.call("publishFinished",link);
+			}
+			else if(status=="failed")
+			{
+				var error	=	xml.errors.error.toString();
+				ExternalInterface.call("publishError",error);
 			}
 			else
 			{
