@@ -20,7 +20,11 @@
             }
         #recording {background: url(/img/fRecording.png) no-repeat;}
         #not {background: url(/img/fNot.png) no-repeat;}
-	
+        .status {
+            clear: both;
+            float: left;
+            margin-left: 20px;
+        }
 		</style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     
@@ -83,6 +87,8 @@
 		}
 		function publishRecording() 
 		{ 
+            $('#recording').hide();
+            $('#flash').hide();
 			swf.publishRecording(); 
 		}
 		function previewRecording() 
