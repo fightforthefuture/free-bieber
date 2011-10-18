@@ -59,10 +59,9 @@
 		}
 		function startRecording() 
 		{ 
-			var x=document.getElementById("navigation2");
-			x.style.visibility = "hidden";
+			//var x=document.getElementById("navigation2");
+			//x.style.visibility = "hidden";
             $("#recording").toggle();
-            $("#not").toggle();
 			swf.startRecording(); 
 		}
 		function pauseRecording() 
@@ -71,7 +70,6 @@
 			x.style.visibility = "visible";
             $('#recording').toggle();
             $('#not').toggle();
-            alert("DAMN YO YOU PAUSED IT");
 
 			
 			swf.pauseRecording(); 
