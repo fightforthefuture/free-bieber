@@ -68,7 +68,7 @@
 		function publishFinished(link){ 
             var x=document.getElementById("status"); x.innerHTML = link; 
             safeurl = encodeURIComponent(link);
-            $('#facebook').text("https://www.facebook.com/sharer.php?u=" + safeurl + "&t=FREE BIEBER");
+            $('#facebook').text("<a href='Share on Facebook'>https://www.facebook.com/sharer.php?u=" + safeurl + "&t=FREE BIEBER</a>");
         }
 		function publishError(error){ var x=document.getElementById("status"); x.innerHTML = error }
 		//following are function call to flash object
