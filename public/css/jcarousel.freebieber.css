@@ -1,0 +1,42 @@
+.jcarousel-skin-freebieber .jcarousel-container {
+   text-align: center;
+}
+
+.jcarousel-skin-freebieber .jcarousel-direction-rtl {
+	 direction: rtl;
+}
+
+.jcarousel-skin-freebieber .jcarousel-container-horizontal {
+   width: 701px;
+}
+
+.jcarousel-skin-freebieber .jcarousel-clip {
+   width: 700px;
+   height: 371px;
+   overflow: hidden;
+}
+
+.jcarousel-skin-freebieber .jcarousel-clip-horizontal {
+    width:  701px;
+    height: 371px;
+}
+
+.jcarousel-skin-freebieber .jcarousel-item {
+   width: 701px;
+   height: 371px;
+}
+
+.jcarousel-skin-freebieber .jcarousel-item-horizontal {
+	 margin-left: 0;
+   margin-right: 10px;
+}
+
+.jcarousel-skin-freebieber .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 10px;
+   margin-right: 0;
+}
+
+.jcarousel-skin-freebieber .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}

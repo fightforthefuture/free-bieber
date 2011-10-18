@@ -115,7 +115,7 @@ ul.social li.em a {background: url(../img/buttons/norm_em.png) no-repeat;}
 .panel ol li a {display: inline-block; padding: 3px; font-size: 12px;}
 .panel ol li a.active {border: 1px solid white;}
 .panel ol {margin-right: 20px; position: absolute; top: 340px;}
-.panel .small_arrow {padding-left: 3px; padding-right: 13px; position: absolute; top: 340px; margin-left: 130px;}
+.panel .small_arrow {padding-left: 10px; padding-right: 13px; position: absolute; top: 340px; margin-left: 130px; text-decoration: none;}
 .panel .small_arrow span {padding-left: 8px;}
 .panel h2 {clear: both; color: #ff8121; font-size: 17px; line-height: 1.4; margin-bottom: 10px;}
 .panel p {margin-bottom: 10px;}
@@ -527,26 +527,15 @@ ul.photos li {margin-top: 20px;}
 
 /* SLIDESHOW */
 
-.slides {
-    overflow: hidden;
-    width: 701px;
-    height: 371px;
-    position: relative;
-}
-
-.slideImages {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.slideImages li img {
-    float: left;
-}
-
 .slideText {
-    overflow: hidden;
-    height: 200px;
+   overflow: hidden;
+   height: 250px;
+   font-size: 16px;
+   margin-bottom: 5px;
+}
+
+.slideText h2 {
+   font-size: 16px;
 }
 
 ol.nav li a {cursor:pointer;}
