@@ -61,16 +61,16 @@
 		{ 
 			//var x=document.getElementById("navigation2");
 			//x.style.visibility = "hidden";
-            $('#recording').toggle();
-            $('#not').toggle();
+            $('#recording').show();
+            $('#not').hide();
 			swf.startRecording(); 
 		}
 		function pauseRecording() 
 		{
 			var x=document.getElementById("navigation2");
 			x.style.visibility = "visible";
-            $('#recording').toggle();
-            $('#not').toggle();
+            $('#recording').hide();
+            $('#not').show();
 
 			
 			swf.pauseRecording(); 
