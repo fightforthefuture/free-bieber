@@ -16,7 +16,7 @@
             z-index: 9; 
             left: 25px; 
             top: 25px; 
-            visibility: hidden;
+            display: none;
             }
         #recording {background: url(/img/fRecording.png) no-repeat;}
         #not {background: url(/img/fNot.png) no-repeat;}
@@ -62,18 +62,17 @@
 		{ 
 			var x=document.getElementById("navigation2");
 			x.style.visibility = "hidden";
-            var y=document.getElementById("recording");
-            y.style.visibility = "visible";
-            var z=document.getElementById("not");
-            z.style.visibility = "hidden";
+            $("#recording").toggle();
+            $("#not").toggle();
 			swf.startRecording(); 
 		}
 		function pauseRecording() 
 		{
 			var x=document.getElementById("navigation2");
 			x.style.visibility = "visible";
-            var y=document.getElementById("recording");
-            y.style.visiblity = "hidden";
+            $("#recording").toggle();
+            $("#not").toggle();
+
 			
 			swf.pauseRecording(); 
 		}
