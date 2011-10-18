@@ -70,7 +70,6 @@
             safeurl = encodeURIComponent(link);
             $('#facebook').text("<a href='Share on Facebook'>https://www.facebook.com/sharer.php?u=" + safeurl + "&t=FREE BIEBER</a>");
             $('#flash').hide();
-            $(  
         }
 		function publishError(error){ var x=document.getElementById("status"); x.innerHTML = error }
 		//following are function call to flash object
@@ -146,8 +145,8 @@
             status:true, xfbml:true 
          });
 
-        // FB.ui({ method: 'feed', 
-         //   message: 'Facebook for Websites is super-cool'});
+        FB.ui({ method: 'feed', 
+        message: 'Facebook for Websites is super-cool'});
       </script>
  	<script type="text/javascript"> 
 		var so = new SWFObject("OverlayRecorder.swf", "OverlayRecorder", "480", "360", "10", "0x1E1E1E"); 
