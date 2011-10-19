@@ -21,9 +21,12 @@
         #recording {background: url(/img/fRecording.png) no-repeat;}
         #not {background: url(/img/fNot.png) no-repeat;}
         .status {
-            clear: both;
-            float: left;
-            margin-left: 20px;
+        position: absolute;
+    width: 480px;
+    text-align: center;
+    z-index: 10;
+    height: 20px;
+    margin-top: 250px;
         }
 #processing {
     background: url(../img/processing.png) no-repeat;
@@ -35,9 +38,12 @@
 }
 
 #facebook {
-    float: left;
-margin-top:600px;
-background: red;
+    position: absolute;
+    width: 480px;
+    text-align: center;
+    z-index: 10;
+    height: 20px;
+    margin-top: 250px;
 }
 		</style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -75,7 +81,7 @@ background: red;
 		function publishFinished(link){ 
             var x=document.getElementById("status"); x.innerHTML = link; 
             safeurl = encodeURIComponent(link);
-            $('#facebook').text("<a href='https://www.facebook.com/sharer.php?u=" + safeurl + "&t=FREE BIEBER'>Share your video on Facebook!</a>");
+            $('#facebooklink').attr(href="https://www.facebook.com/sharer.php?u=" + safeurl + "&t=FREE BIEBER");
             $('#flash').hide();
         }
 		function publishError(error){ var x=document.getElementById("status"); x.innerHTML = error }
@@ -140,7 +146,7 @@ background: red;
 			</div>
 		</div>
         <div id="status"></div>
-        <div id="facebook"></div>
+        <div id="facebook"><a href="">Share Your Video On Facebook!</a></div>
 
 	</div>
  	<script type="text/javascript"> 
