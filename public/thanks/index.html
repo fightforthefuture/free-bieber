@@ -42,8 +42,43 @@
 <div class="jailbieber">
     <p><em>Want Justin Bieber in jail?</em> <a href="">Sign the Jail Bieber petition!</a> (By popular demand)</p>
 </div>
+
+<div class="videoplug" style="background: #fff; margin: 0 auto; width: 950px; border: 1px solid #eee; overflow: auto; margin: 70px; padding: 20px;">
+<h1 style="padding: 20px; padding-left: 0; margin-left: 0;font-size: 25px; font-weight: bold; color: #666;">People are sending messages to Congress form behind bars with the Bieber Cam. Sign a song, record a message from behind bars too!</h1>
+<iframe width="560" height="315" src="http://www.youtube.com/embed/o_vb42otPiA" frameborder="0" allowfullscreen></iframe>
+<a href="/flash/OverlayRecorder.html" class="large_button modal" id="bierbercam" style="float: right;"><span>Try the Biebercam Now!</span></a>
+</div>
 </div>
 	
+<script src="/js/tweet/jquery.tweet.js"></script>
+<script type="text/javascript" src="/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    
+<script type='text/javascript'>
+    $(function($){
+        $('#emailer').focus(function() {
+            $('#detailer').slideDown();
+        });
+
+        $(".modal").fancybox({
+            'height': '100',
+            'transitionIn'      : 'none',
+            'transitionOut'     : 'none',
+            'type'              : 'iframe'
+        }
+
+
+);
+    
+        $(".tweet").tweet({
+            query: "#belieber",
+            avatar_size: 60,
+            count: 4,
+            loading_text: "loading tweets..."
+        });
+});
+
+</script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -59,6 +94,5 @@
   })();
 
 </script>
-
 </body>
 </html>

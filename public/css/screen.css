@@ -15,7 +15,7 @@ body {
     margin-bottom: 100px;
 }
 
-body.thanks .wrap {background: url(../img/wrap_background_alternate.jpg) no-repeat center -21px #050508;}
+.thanks .wrap {background: url(../img/wrap_background_alternate.jpg) no-repeat center -21px #050508;}
 
 #alternate {background: url(../img/wrap_background_alternate.jpg) no-repeat center -1px #050508;}
 
@@ -69,8 +69,8 @@ a {color: #ff8321;}
 
 .signup p {font-size: 16px;}
 
-body.thanks .signup p {padding-top: 30px; font-size: 20px;}
-body.thanks .signup h2 {padding-top: 5px; font-size: 40px; padding-bottom: 0; margin-bottom: 0;}
+.thanks .signup p {padding-top: 30px; font-size: 20px;}
+.thanks .signup h2 {padding-top: 5px; font-size: 40px; padding-bottom: 0; margin-bottom: 0;}
 
 .signup form {margin: 0 auto; width: 522px; padding-top: 20px; margin-bottom: 20px;}
 
@@ -99,7 +99,7 @@ body.thanks .signup h2 {padding-top: 5px; font-size: 40px; padding-bottom: 0; ma
 }
 
 .signup ul.social {margin-top: 60px; clear: both;}
-body.thanks ul.social {margin-top: 20px;}
+.thanks ul.social {margin-top: 20px;}
 
 .signup ul.social li {display: inline; padding-left: 3px; padding-right: 3px;}
 
