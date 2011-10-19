@@ -265,7 +265,7 @@ ul.share li.em a {background: url(../img/buttons/small_em.png) no-repeat;}
     line-height: 1.7;
 }
 
-.primary .spot {padding-right: 30px; width: 210px;} /* was: width:195 */
+.primary .spot {padding-right: 15px; width: 210px;}
 
 .secondary .spot {padding-left: 35px;}
 
