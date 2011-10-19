@@ -569,7 +569,13 @@ ul.photos li {margin-top: 20px;}
    overflow: hidden;
    height: 250px;
    font-size: 16px;
-   margin-bottom: 5px;
+   margin-bottom: 10px;
+}
+
+/* Slideshow controls. */
+.panel .nav, #next_button {
+   display: block;
+   margin-top: 5px;
 }
 
 .slideText h2 {
