@@ -585,3 +585,12 @@ ul.photos li {margin-top: 20px;}
 }
 
 ol.nav li a {cursor:pointer;}
+
+.comingsoon {
+	width: 584px;
+	height: 485px;
+	position: absolute;
+	background: url(../img/store-coming-soon.png) no-repeat;
+	margin-left: 7px;
+	margin-top: 1px;
+}
