@@ -510,6 +510,13 @@ ul.photos li {margin-top: 20px;}
     width: 528px;
 }
 
+#detailer p {
+    margin:-15px 0 0 0;
+    font-size: 9px;
+    font-weight:normal;
+    font-style:italic;
+}
+
 #detailer input {
     font-size: 14px;
     font-weight: normal;
