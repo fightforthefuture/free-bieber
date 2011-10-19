@@ -231,7 +231,8 @@ ul.share li.em a {background: url(../img/buttons/small_em.png) no-repeat;}
 
 .left_inside h5 {
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 18px;
+	width:300px;
 }
 
 .left_inside h4 {
@@ -352,7 +353,54 @@ ul.share_petition li.tum a {background: url(../img/buttons/wide_tum.png) no-repe
 
 .paparazzi .large_button span {
     text-align: center;
-    width: 100px; /* 120 */
+    width: 120px; /* 120 */
+}
+
+#navigation1 .large_button span {
+    text-align:center;
+    width: 80px;
+    margin-left:-3px;
+    padding-right:0px;
+    padding-top:3px;
+}
+
+#navigation2 .large_button span {
+    text-align:center;
+    width: 80px;
+    margin-left:-3px;
+    padding-right:0px;
+    padding-top:3px;
+}
+
+.large_button span {
+    width: 100px;
+    background: url(../img/large_button_left.png) no-repeat;
+    height: 48px;
+    display: inline-block;
+    padding-top: 13px;
+    margin-left:-1px;
+    padding-left: 10px; /* 20 */
+    padding-right: 0px; /* 10 */
+    color: #2a2a2a;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.4);
+}
+
+.paparazzi .large_button span {
+    padding-left: 20px; /* 20 */
+    padding-right: 10px; /* 10 */
+
+}
+
+.large_button {
+    background: url(../img/large_button_right.png) no-repeat right;
+    height: 48px;
+    display: inline-block;
+    padding-right: 11px;
+    margin: 0 3px 0 3px;
+    cursor: pointer;
 }
 
 ul.photos {margin-top: 10px;}
@@ -383,6 +431,11 @@ ul.photos li {margin-top: 20px;}
 .cam .description {float: left; margin-bottom: 50px; margin-left: 10px;}
 .cam ul {margin-left: 18px; margin-top: 10px;}
 .cam ul li {list-style-type: disc; padding-left: 0px;}
+
+#launchcam
+{
+	width:255px;
+}
 
 .cam .main h4 {
     font-size: 20px;
@@ -447,29 +500,6 @@ ul.photos li {margin-top: 20px;}
     height: 26px;
     display: inline-block;
     padding-right: 24px;
-    cursor: pointer;
-}
-
-.large_button span {
-    background: url(../img/large_button_left.png) no-repeat;
-    height: 48px;
-    display: inline-block;
-    padding-top: 13px;
-    padding-left: 10px; /* 20 */
-    padding-right: 0px; /* 10 */
-    color: #2a2a2a;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    text-shadow: 1px 1px 1px rgba(255,255,255,0.4);
-}
-
-.large_button {
-    background: url(../img/large_button_right.png) no-repeat right;
-    height: 48px;
-    display: inline-block;
-    padding-right: 11px;
-    margin: 0 3px 0 3px;
     cursor: pointer;
 }
 
