@@ -19,6 +19,7 @@
             display: none;
             }
         #recording {background: url(/img/fRecording.png) no-repeat;}
+        #preview {background: url(/img/fPreview.png) no-repeat;}
         #not {background: url(/img/fNot.png) no-repeat;}
         #status {
         position: absolute;
@@ -125,6 +126,7 @@
 		}
 		function previewRecording() 
 		{ 
+            $("#preview").show();
 			swf.previewRecording(); 
 		}
 		function getMovieName(movieName) { if (navigator.appName.indexOf("Microsoft") != -1) { return window[movieName] } else { return document[movieName] } }
@@ -134,6 +136,7 @@
 	<body>
 	<div id="bodydiv" align="center" style="width:100%;height:100%;">
     <div id="recording" class="others"></div>
+    <div id="preview" class="others"></div>
     <div id="not" class="others"></div>
     <div id="processing"></div>
 		<div id="flash"  style="float:left;position:absolute; width:480px;height:360px;">
