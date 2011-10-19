@@ -1,0 +1,503 @@
+<!doctype html>
+<html dir="ltr" lang="en" class="no-js">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width" />
+
+ <title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}
+	<meta name="description" content="{MetaDescription}" />
+{/block:Description}
+
+<link rel="stylesheet" href="reset.css" media="screen" />
+<link rel="stylesheet" href="style.css" media="screen" />
+
+
+<!-- give life to HTML5 objects in IE -->
+<!--[if lte IE 8]><script src="html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<!-- js HTML class -->
+<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+</head>
+<body>
+<!-- begin markup -->
+
+<div id="wrap" class="clearfix">
+	
+	<div id="page">
+		<div id="top">
+			<ul>
+				<li><a href="http://tumblr.com/follow/freebieber" class="f1"></a></li>
+				<!-- <li><a href="#" class="f2"></a></li> -->
+				<li><a href="http://twitter.com/#!/freebieber4eva" class="f3"></a></li>
+				<li><a href="http://facebook.com/freebieber" class="f4"></a></li>
+			</ul>
+		</div>
+
+		<div id="head">
+			<h1>Free Beiber</h1>
+			<div class="info">
+				<div class="hbox">
+					<h2>Bieber Faces 5 Years in Prison</h2>
+					<p>content</p>
+					<form action="http://action.freebieber.org/page/signup/external-form-name" method="post" id="signup">
+						<p>
+							<input type="text" class="text" value="Enter your e-mail to sign our petition" name="email" id="emailer" onclick="this.value=''" />
+							<input type="submit" class="submit" value="Submit" />
+						</p>
+					</form>
+				</div>
+				<div class="free">
+					<strong>No one should go to jail for singing songs.</strong>
+					<a href="http://freebieber.org">Visit Freebieber.org</a>
+				</div>
+			</div>
+
+			<div class="what">
+				<div class="hbox">
+					<h3>What the hell?</h3>
+					<p>JUSTIN BIEBER HAS BEEN SENTENCED TO 5 BRUTAL YEARS IN PRISON. TO READ MORE ABOUT THIS HEINOUS CRIME, VISIT FREEBIEBER.ORG</p>
+					<p>DO YOU HAVE ANY MEDIA RECORDINGS RELATED TO JUSTIN'S INCARCERATION?</p>
+				</div>
+				<a href="/submit/">Submit a picture</a>
+			</div>
+		</div><!-- e: head -->
+
+
+		<div id="content">
+			
+			{block:Posts}
+
+			{block:Text}
+			<div class="entry">
+				<ul class="share">
+					<li><a href="#" class="share1"></a></li>
+					<li><a href="{ReblogURL}" class="share2"></a></li>
+					<li><a href="http://twitter.com/home?status=Currently reading 'POSTNAME, {URLEncodedPermalink}'" class="share3"></a></li>
+					<li><a href="#" class="share4" name="fb_share"></a>
+					<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" 
+					        type="text/javascript">
+					</script>
+					</li>
+				</ul>
+				
+				{block:Date} 
+				<span class="date">Posted on {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</span>
+				{/block:Date}
+
+				<div class="entry-content">
+
+
+					{block:Title}
+                     	<h3><a href="{Permalink}">{Title}</a></h3>
+                    {/block:Title}
+
+
+                    {Body}
+				</div>
+
+				<p class="comment-count">
+					<a href="#">{NoteCount} Notes</a>
+				</p>
+
+				<div class="notes">
+					{PostNotes}	
+				</div>
+
+				
+			</div><!-- e: entry -->
+			{/block:Text}
+
+
+
+
+			{block:Photo}
+			<div class="entry">
+				<ul class="share">
+					<li><a href="#" class="share1"></a></li>
+					<li><a href="{ReblogURL}" class="share2"></a></li>
+					<li><a href="http://twitter.com/home?status=Currently reading 'POSTNAME, {URLEncodedPermalink}'" class="share3"></a></li>
+					<li><a href="#" class="share4" name="fb_share"></a>
+					<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" 
+					        type="text/javascript">
+					</script>
+					</li>
+				</ul>
+
+				{block:Date} 
+				<span class="date">Posted on {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</span>
+				{/block:Date}
+				
+				<div class="entry-image">
+					<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+				</div>
+
+				<div class="entry-content">
+					
+					{block:Caption}
+                        <div class="caption">{Caption}</div>
+                    {/block:Caption}
+
+
+					{block:Title}
+                     	<h3><a href="{Permalink}">{Title}</a></h3>
+                    {/block:Title}
+
+				</div>
+
+				<p class="comment-count">
+					<a href="#">{NoteCount} Notes</a>
+				</p>
+
+				<div class="notes">
+					{PostNotes}	
+				</div>
+
+				
+			</div><!-- e: entry -->
+			{/block:Photo}
+
+
+
+			{block:Photoset}
+			<div class="entry">
+				<ul class="share">
+					<li><a href="#" class="share1"></a></li>
+					<li><a href="{ReblogURL}" class="share2"></a></li>
+					<li><a href="http://twitter.com/home?status=Currently reading 'POSTNAME, {URLEncodedPermalink}'" class="share3"></a></li>
+					<li><a href="#" class="share4" name="fb_share"></a>
+					<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" 
+					        type="text/javascript">
+					</script>
+					</li>
+				</ul>
+
+				{block:Date} 
+				<span class="date">Posted on {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</span>
+				{/block:Date}
+				
+				<div class="entry-image">
+					{Photoset-500}
+				</div>
+
+				<div class="entry-content">
+					
+					{block:Caption}
+                        <div class="caption">{Caption}</div>
+                    {/block:Caption}
+
+
+					{block:Title}
+                     	<h3><a href="{Permalink}">{Title}</a></h3>
+                    {/block:Title}
+
+				</div>
+
+				<p class="comment-count">
+					<a href="#">{NoteCount} Notes</a>
+				</p>
+
+				<div class="notes">
+					{PostNotes}	
+				</div>
+
+				
+			</div><!-- e: entry -->
+			{/block:Photoset}
+
+
+
+
+			{block:Quote}
+			<div class="entry">
+				<ul class="share">
+					<li><a href="#" class="share1"></a></li>
+					<li><a href="{ReblogURL}" class="share2"></a></li>
+					<li><a href="http://twitter.com/home?status=Currently reading 'POSTNAME, {URLEncodedPermalink}'" class="share3"></a></li>
+					<li><a href="#" class="share4" name="fb_share"></a>
+					<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" 
+					        type="text/javascript">
+					</script>
+					</li>
+				</ul>
+
+				{block:Date} 
+				<span class="date">Posted on {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</span>
+				{/block:Date}
+				
+
+				<div class="entry-content">
+					
+					<div class="quote">
+						{Quote}
+					</div>
+                    {block:Source}
+                        <div class="source">{Source}</div>
+                    {/block:Source}
+				</div>
+
+				<p class="comment-count">
+					<a href="#">{NoteCount} Notes</a>
+				</p>
+
+				<div class="notes">
+					{PostNotes}	
+				</div>
+
+				
+			</div><!-- e: entry -->
+			{/block:Quote}
+
+
+
+			{block:Link}
+			<div class="entry">
+				<ul class="share">
+					<li><a href="#" class="share1"></a></li>
+					<li><a href="{ReblogURL}" class="share2"></a></li>
+					<li><a href="http://twitter.com/home?status=Currently reading 'POSTNAME, {URLEncodedPermalink}'" class="share3"></a></li>
+					<li><a href="#" class="share4" name="fb_share"></a>
+					<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" 
+					        type="text/javascript">
+					</script>
+					</li>
+				</ul>
+
+				{block:Date} 
+				<span class="date">Posted on {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</span>
+				{/block:Date}
+
+				<div class="entry-content">
+					
+
+					<a href="{URL}" class="link" {Target}>{Name}</a>
+                    {block:Description}
+                        <div class="description">{Description}</div>
+                    {/block:Description}
+
+				</div>
+
+				<p class="comment-count">
+					<a href="#">{NoteCount} Notes</a>
+				</p>
+
+				<div class="notes">
+					{PostNotes}	
+				</div>
+
+				
+			</div><!-- e: entry -->
+			{/block:Link}
+
+
+
+
+			{block:Chat}
+			<div class="entry">
+				<ul class="share">
+					<li><a href="#" class="share1"></a></li>
+					<li><a href="{ReblogURL}" class="share2"></a></li>
+					<li><a href="http://twitter.com/home?status=Currently reading 'POSTNAME, {URLEncodedPermalink}'" class="share3"></a></li>
+					<li><a href="#" class="share4" name="fb_share"></a>
+					<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" 
+					        type="text/javascript">
+					</script>
+					</li>
+				</ul>
+
+				{block:Date} 
+				<span class="date">Posted on {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</span>
+				{/block:Date}
+				
+
+				<div class="entry-content">
+
+					{block:Title}
+                     	<h3><a href="{Permalink}">{Title}</a></h3>
+                    {/block:Title}
+					
+					 <ul class="chat">
+                        {block:Lines}
+                            <li class="{Alt} user_{UserNumber}">
+                                {block:Label}
+                                    <span class="label">{Label}</span>
+                                {/block:Label}
+
+                                {Line}
+                            </li>
+                        {/block:Lines}
+                    </ul>
+
+				</div>
+
+				<p class="comment-count">
+					<a href="#">{NoteCount} Notes</a>
+				</p>
+
+				<div class="notes">
+					{PostNotes}	
+				</div>
+
+				
+			</div><!-- e: entry -->
+			{/block:Chat}
+
+
+
+
+			{block:Video}
+			<div class="entry">
+				<ul class="share">
+					<li><a href="#" class="share1"></a></li>
+					<li><a href="{ReblogURL}" class="share2"></a></li>
+					<li><a href="http://twitter.com/home?status=Currently reading 'POSTNAME, {URLEncodedPermalink}'" class="share3"></a></li>
+					<li><a href="#" class="share4" name="fb_share"></a>
+					<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" 
+					        type="text/javascript">
+					</script>
+					</li>
+				</ul>
+
+				{block:Date} 
+				<span class="date">Posted on {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</span>
+				{/block:Date}
+				
+				<div class="entry-image">
+					{Video-500}
+				</div>
+
+				<div class="entry-content">					
+					{block:Caption}
+                        <div class="caption">{Caption}</div>
+                    {/block:Caption}
+				</div>
+
+				<p class="comment-count">
+					<a href="#">{NoteCount} Notes</a>
+				</p>
+
+				<div class="notes">
+					{PostNotes}	
+				</div>
+
+				
+			</div><!-- e: entry -->
+			{/block:Video}
+
+
+
+
+			{block:Audio}
+			<div class="entry">
+				<ul class="share">
+					<li><a href="#" class="share1"></a></li>
+					<li><a href="{ReblogURL}" class="share2"></a></li>
+					<li><a href="http://twitter.com/home?status=Currently reading 'POSTNAME, {URLEncodedPermalink}'" class="share3"></a></li>
+					<li><a href="#" class="share4" name="fb_share"></a>
+					<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" 
+					        type="text/javascript">
+					</script>
+					</li>
+				</ul>
+
+				{block:Date} 
+				<span class="date">Posted on {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}</span>
+				{/block:Date}
+				
+				<div class="entry-image">
+					{AudioPlayerBlack}
+				</div>
+
+				<div class="entry-content">
+
+					{block:Caption}
+                        <div class="caption">{Caption}</div>
+                    {/block:Caption}
+
+				</div>
+
+				<p class="comment-count">
+					<a href="#">{NoteCount} Notes</a>
+				</p>
+
+				<div class="notes">
+					{PostNotes}	
+				</div>
+
+				
+			</div><!-- e: entry -->
+			{/block:Audio}
+
+
+
+			{/block:Posts}
+
+
+			<p id="pnav">
+	            {block:PreviousPage}
+	                <a href="{PreviousPage}">&#171; Previous</a>
+	            {/block:PreviousPage}
+
+	            {block:NextPage}
+	                <a href="{NextPage}">Next &#187;</a>
+	            {/block:NextPage}
+
+	            <a href="/archive">Archive</a>
+	        </p>
+
+
+		</div><!-- e: content -->
+
+	</div><!-- e: page -->
+
+	<div id="sidebar">
+			<div class="widget">
+				<h3>Follow Us</h3>
+				<ul>
+					<li><a href="/ask">Ask a question</a></li>
+					<li><a href="/rss">RSS Feed</a></li>
+					<li><a href="/archives">Archives</a></li>
+				</ul>
+
+				<p>Justin Bieber could face 5 years in prison for singing songs on Youtube. Insane, but true.</p>
+				<p><a href="http://freebieber.org">Visit FREEBIEBER.ORG</a></p>
+
+				<hr />
+				<p>Picutres of Justin's incarceration?</p>
+				<p><a href="/submit">Submit Photo</a></p>
+			</div>
+
+			<div class="widget">
+				<h3>Photos needed to do justice to justin's jail sentence</h3>
+				<ul>
+					<li><a href="#">{linkage value}</a></li>
+					<li><a href="#">{linkage value}</a></li>
+					<li><a href="#">{linkage value}</a></li>
+					<li><a href="#">{linkage value}</a></li>
+					<li><a href="#">{linkage value}</a></li>
+					<li><a href="#">{linkage value}</a></li>
+					<li><a href="#">{linkage value}</a></li>
+					<li><a href="#">{linkage value}</a></li>
+					<li><a href="#">{linkage value}</a></li>
+					<li><a href="#">{linkage value}</a></li>
+					<li><a href="#">{linkage value}</a></li>
+				</ul>
+			</div>
+		</div><!-- e: sidebar -->
+
+</div><!-- e: wrap -->
+
+
+
+<!-- site JS -->
+<script src="scripts/jquery-1.5.min.js"></script>
+<script src="scripts/plugins.js"></script>
+<script src="scripts/script.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,476 @@
+/*
+
+Theme Name: 
+Theme URI: 
+Description:
+Version:
+Author: 
+
+*/	
+
+
+/* global mixins */
+
+.clip{
+	-webkit-background-clip: padding-box; 
+	-moz-background-clip: padding; 
+	-o-background-clip: padding; 
+	background-clip: padding-box; 
+}
+
+.round (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.shadow (@depth: 0 2px 4px rgba(0,0,0,.3)){
+	-webkit-box-shadow: @depth;
+	-moz-box-shadow: @depth;
+	-o-box-shadow: @depth;
+	box-shadow: @depth;
+}
+
+.inset-shadow (@inner-depth: inset 0 0 6px rgba(0,0,0,.2)){
+	/* this mixin is probably unnecessary given @depth scope on .shadow */
+	-webkit-box-shadow: @inner-depth;
+	-moz-box-shadow: @inner-depth;
+	-o-box-shadow: @inner-depth;
+	box-shadow: @inner-depth;
+}
+
+.rotate (@deg: rotate(9deg)){	
+	-webkit-transform: @deg;
+	-moz-transform: @deg;
+	-ms-transform: @deg;
+	-o-transform: @deg;
+	transform: @deg;
+}
+
+.bgsize (@size: 100% 100%){
+	-webkit-background-size: @size; 
+	-moz-background-size: @size;
+	-o-background-size: @size;
+	background-size: @size;
+}
+
+.gradient(@start: #eee, @end: #777) {	
+	background: @start;
+	background-image: -moz-linear-gradient(top, @start, @end); 
+	background-image: -ms-linear-gradient(top, @start, @end); 
+	background-image: -o-linear-gradient(top, @start, @end);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(@start), to(@end));
+	background-image: -webkit-linear-gradient(top, @start, @end);
+	background-image: linear-gradient(top, @start, @end);
+}
+
+.transition (@who: all, @length: .5s, @how: ease-out){
+	-webkit-transition: @who @length @how;
+	-moz-transition: @who @length @how;
+	-ms-transition: @who @length @how;
+	-o-transition: @who @length @how;
+	transition: @who @length @how;
+}
+
+.clear{/* for use on :after */
+	content: " "; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;	
+}
+
+
+/* global color variables */
+
+@link: #777;
+
+@heading: #333;
+
+@border: #ccc;
+
+
+
+
+/* global layout */
+
+html{	
+	height: 100%;
+}
+
+body {
+	font-size: 12px;
+	margin: 0px;
+	text-align: center;
+	background: #ddd url(img/bg.jpg) top left no-repeat;
+	color: #333;
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+#wrap{
+	position: relative;
+	width: 1048px;
+	margin: 0 auto;	
+	height: 100%;
+}
+
+	#page{
+		float: left;
+		width: 794px;
+		min-height: 100%;
+		background: url(img/pbg.gif);
+	}
+
+		#top{
+			position: relative;
+			height: 28px;
+			padding: 6px 20px 0;
+			background: url(img/top.jpg)top left;
+			ul{
+				float: right;
+				padding-left: 130px;
+				height: 21px;
+				background: url(img/follow.jpg) left center no-repeat;
+			}
+
+			li{
+				float: left;
+				padding-right: 18px;	
+			}
+
+			a{
+				float: left;
+				width:24px;
+				height: 21px;
+				text-indent: -9999em;
+			}
+
+			.f1{
+				background: url(img/s1.jpg) top left no-repeat;
+			}
+			.f2{
+				background: url(img/s2.jpg) top left no-repeat;
+			}
+			a.f3{
+				width: 29px;
+				background: url(img/s3.jpg) top left no-repeat;
+			}
+			.f4{
+				background: url(img/s4.jpg) top left no-repeat;
+			}
+
+			a:hover{
+				opacity: .6;
+			}
+		}/* top */
+
+
+
+		#head{
+			position: relative;
+			overflow: hidden;			
+			padding: 12px 40px 20px;
+			text-align: left;
+			
+			h1{
+				position: relative;
+				height: 40px;
+				text-indent: -9999em;
+				background: url(img/title1.jpg) top left no-repeat;
+			}
+		}
+
+			.info{
+				float: left;
+				width: 457px;
+				position: relative;
+				color: #B4B4B4;
+				line-height: 1.5em;
+
+				h2{
+					height: 30px;
+					text-indent: -9999em;
+					background: url(img/title1.jpg) bottom left no-repeat;
+				}
+
+				p{
+					padding-bottom: 1em;
+				}
+
+				form{
+					position: relative;
+
+					.text{
+						float: left;
+						padding: 5px;
+						line-height: 20px;
+						height: 20px;
+						width: 322px;
+						border:0;
+						color: #B4B4B4;
+						font-size: 16px;
+						margin-top: 2px;
+						background: url(img/text.jpg) left center no-repeat;
+					}
+
+					.submit{
+						float: left;
+						height: 33px;
+						width: 110px;
+						border: 0;
+						text-indent: -9999em;
+						margin-left: 9px;
+						background: url(img/submit.jpg) no-repeat;
+					}
+				}
+
+				.free{
+					position: relative;
+					min-height: 24px;
+
+					strong{
+						float: left;
+						text-transform: uppercase;
+						font-weight: bold;
+						color: #E5E52F;
+						line-height: 24px;
+					}
+
+					a{
+						float: right;
+						height:24px;
+						margin: 0 4px;
+						line-height: 24px;
+						color: #37392E;
+						.round(3px);
+						.shadow();
+						font-size: 11px;
+						text-align: center;
+						text-transform: uppercase;
+						font-weight: bold;
+						padding: 0 10px;
+						background: url(img/button.jpg) top center;
+					}
+				}
+
+			}
+
+
+			.what{
+				position: relative;
+				float: right;
+				width: 231px;
+				text-align: left;
+				color: #B4B4B4;
+
+				line-height: 1.4em;
+				font-size: 11px;
+
+				p{
+					padding-bottom: 1em;
+				}
+
+				a{
+					display: block;
+					height:24px;
+					margin: 0 4px;
+					line-height: 24px;
+					color: #37392E;
+					.round(3px);
+					.shadow();
+					font-size: 11px;
+					text-align: center;
+					text-transform: uppercase;
+					font-weight: bold;
+					background: url(img/button.jpg) top center;
+				}
+
+				h3{
+					height: 30px;
+					text-indent: -9999em;
+					background: url(img/what.jpg) bottom left no-repeat;
+				}
+					
+			}
+
+			.hbox{
+				min-height: 160px;
+			}
+		
+		
+		#pnav{
+			position: relative;
+			clear: both;
+			padding: 25px;
+		}
+
+		#pnav a{
+			color: #fff;
+		}
+
+		
+		#content{
+			position: relative;
+			padding: 10px 40px;
+		}
+
+			.entry-image{
+				img{
+					width: 330px;
+				}
+			}
+
+			.entry{
+				position: relative;
+				padding: 0 6px 8px;
+				width: 330px;
+				font-family: Museo, Georgia, Arial, Helvetica, sans-serif;
+				.shadow(0 0 6px rgba(0,0,0,.4));
+				border-top: 5px solid #fff;
+				color: #b4b4b4;
+				text-align: left;
+				line-height: 1.5em;
+				font-size: 11px;
+				margin-bottom: 20px;
+
+				h2, h3, h4{
+					font-size: 22px;
+					font-weight: bold;
+					padding: 4px 0 12px;
+				}
+
+				a{
+					color: #b4b4b4;
+					text-align: right;
+				}
+
+				p{
+					padding-bottom: 1em;
+				}
+
+				.share{
+					position: relative;
+					padding-left: 20px;
+					height: 17px;
+					padding-bottom: 12px;
+
+					li{
+						float: left;
+						padding-right: 2px;	
+					}
+
+					a{
+						float: left;
+						width: 22px;
+						height: 17px;
+						text-indent: -9999em;
+					}
+
+					.share1{
+						background: url(img/b1.jpg) center no-repeat;
+					}
+					.share2{
+						background: url(img/b2.jpg) center no-repeat;
+					}
+					.share3{
+						background: url(img/b3.jpg) center no-repeat;
+					}
+					.share4{
+						width: 22px !important;
+						background: url(img/b4.jpg) center no-repeat;
+
+						span{
+							display: none;
+						}
+					}
+
+					a:hover{
+						opacity: .7;
+					}
+				}
+
+				.date{
+					position: relative;
+					display: block;
+					padding: 0 0 6px 8px;
+					color: #fff;
+				}
+
+				.comment-count{
+					text-align: right;
+
+
+				}
+			}
+
+			
+			#sidebar{
+				float: right;
+				width: 234px;
+				padding-top: 300px;
+			}
+
+				.widget{
+					position: relative;
+					background: #fff;
+					border-top: 5px solid #5E5E5E;
+					color: #3E3C3D;
+					text-align: left;
+					margin-bottom: 25px;
+					font-size: 11px;
+					padding-bottom: 8px;
+					.shadow(0 0 10px rgba(0,0,0,.5));
+
+					h3{
+						font-weight: bold;
+						padding: 8px 10px;
+						line-height: 1.4em;
+						text-transform: uppercase;
+						border-bottom: 1px dashed #C9C7C8;
+					
+					}
+
+					ul{
+						position: relative;
+						line-height: 2.5em;
+						padding: 0 10px;
+					}
+
+					li{
+						list-style: inside disc;
+					}
+
+					p{
+						padding: 8px 10px;
+						line-height: 1.4em;
+
+						a{
+							font-weight: bold;
+							text-decoration: underline;
+							text-transform: uppercase;
+						}
+					}
+
+					a{
+						color: #3E3C3D;
+					}
+
+				}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
