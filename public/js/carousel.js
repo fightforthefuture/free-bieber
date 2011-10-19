@@ -29,7 +29,7 @@ function highlightPagerOnLoad(carousel, list_element, index, state) {
 $(function(){
   $("#carousel").jcarousel({
     scroll: 1,
-    auto: 5,
+    auto: 10,
     wrap: "both",
     setupCallback: carouselPagerSetup,
     itemFirstInCallback: highlightPagerOnLoad,
