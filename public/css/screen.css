@@ -265,7 +265,7 @@ ul.share li.em a {background: url(../img/buttons/small_em.png) no-repeat;}
     line-height: 1.7;
 }
 
-.primary .spot {padding-right: 15px; width: 210px;}
+.primary .spot {padding-right: 15px; width: 210px;} /* width:195 */
 
 .secondary .spot {padding-left: 35px;}
 
@@ -352,7 +352,7 @@ ul.share_petition li.tum a {background: url(../img/buttons/wide_tum.png) no-repe
 
 .paparazzi .large_button span {
     text-align: center;
-    width: 120px;
+    width: 100px; /* 120 */
 }
 
 ul.photos {margin-top: 10px;}
@@ -455,8 +455,8 @@ ul.photos li {margin-top: 20px;}
     height: 48px;
     display: inline-block;
     padding-top: 13px;
-    padding-left: 20px;
-    padding-right: 10px;
+    padding-left: 10px; /* 20 */
+    padding-right: 0px; /* 10 */
     color: #2a2a2a;
     font-size: 16px;
     font-weight: bold;
@@ -469,6 +469,7 @@ ul.photos li {margin-top: 20px;}
     height: 48px;
     display: inline-block;
     padding-right: 11px;
+    margin: 0 3px 0 3px;
     cursor: pointer;
 }
 
