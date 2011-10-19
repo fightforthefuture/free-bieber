@@ -9,7 +9,11 @@
         <link rel="stylesheet" href="/css/screen.css" type="text/css" />
 
 <style type="text/css" media="screen">
+body {line-height: 1.5;}
+p {margin-bottom: 10px;}
 
+ul {list-style-type: disc; padding: 10px}
+li {margin-bottom: 5px;}
 #flashContent {width:480px;height:360px;}
 #bodydiv {padding: 2px 0 0 40px;}
 a.large_button {
@@ -196,7 +200,7 @@ a.large_button {
 </head>
 	<body>
 	<div id="bodydiv" align="center">
-	<h4 class="videoh5">Send a message with a video…</h4>
+	<h4 class="videoh5">Record a Video From Behind Bars</h4>
     <div id="recording" class="others"></div>
     <div id="preview" class="others"></div>
     <div id="not" class="others"></div>
@@ -206,19 +210,32 @@ a.large_button {
 			<div id="flashContent">
 			</div>
             <div id="navigation1">
-                <a href="javascript:startRecording()" class="large_button"><span style="padding-top:11px">Record</span></a>
-                <a href="javascript:pauseRecording()" class="large_button"><span>Pause Recording</span></a>
-                <a href="javascript:resetRecording()" class="large_button"><span>Reset Recording</span></a>
+                <a href="javascript:startRecording()" class="not_button"><span style="padding-top:11px">Record</span></a>
+                <a href="javascript:pauseRecording()" class="not_button"><span>Pause Recording</span></a>
+                <a href="javascript:resetRecording()" class="not_button"><span>Reset Recording</span></a>
                 <a href="javascript:publishRecording()" class="large_button"><span style="padding-top:11px">Publish</span></a><br/>
 			</div>
             <div id="navigation2" style="float:left;position:relative">
-                <a href="javascript:previewRecording()" class="large_button"><span>Preview Recording</span></a>
-	<span class="subh5">…from jail, using the BieberCam!</span>
+                <a href="javascript:previewRecording()" class="not_button"><span>Preview Recording</span></a>
 			</div>
 		</div>
         <div id="status"></div>
         <div id="facebook"><a href="" id="facebooklink">Share Your Video On Facebook!</a></div>
 
+	</div>
+	<div style="float: left; margin-top: 460px; width: 400px; margin-left: 60px;">
+	<p>Tell the world why 5-years in jail for streaming _anything_ copyrighted is a terrible idea.</p>
+
+	<p>Or protest the bill by excercising your fair use rights (sing a song, do a dance, etc). Here are some points you could mention:</p>
+	<ul>
+		<li>S. 978 is so extreme, even Justin Bieber could go to jail if it passes, for the videos that made him famous.</li>
+		<li>Even the song "Happy Birthday" is copyrighted. So singing it online could be a felony with a 5-year sentence.</li>
+		<li>Music companies have used laws made for large-scale pirates to sue 14-year-olds.</li>
+		<li>Even if they don't target ordinary users now, this gives the dangerous powers they could use against us in the future.</li>
+	</ul>
+	
+	<p>Once you're done, you can share it on Facebook or Youtube.</p>
+	
 	</div>
  	<script type="text/javascript"> 
 		var so = new SWFObject("OverlayRecorder.swf", "OverlayRecorder", "480", "360", "10", "0x1E1E1E"); 
