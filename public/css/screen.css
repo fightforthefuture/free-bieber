@@ -126,7 +126,7 @@ ul.social li.em a {background: url(../img/buttons/norm_em.png) no-repeat;}
 .panel h2 {clear: both; color: #ff8121; font-size: 17px; line-height: 1.4; margin-bottom: 10px;}
 .panel p {margin-bottom: 10px;}
 
-.panel .sharing {position: absolute; top: 370px;}
+.panel .sharing {position: absolute; top: 370px; width: 191px;}
 
 .panel h5 {font-size: 12px; font-weight: normal; margin-bottom: 3px; color: #aabbdd;}
 
@@ -597,7 +597,21 @@ ul.photos li img {background: url(../img/paparazzi_backgrounds.png) no-repeat}
    overflow: hidden;
    height: 250px;
    font-size: 16px;
-   margin-bottom: 5px;
+   margin-bottom: 10px;
+}
+
+.panel .nav {
+   width: 134px;
+}
+
+#next_button {
+   width: 79px;
+}
+
+/* Slideshow controls. */
+.panel .nav, #next_button {
+   display: block;
+   margin-top: 5px;
 }
 
 .slideText h2 {

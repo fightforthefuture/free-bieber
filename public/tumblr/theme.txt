@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{Title}{block:PostSummary} ({PostSummary}){/block:PostSummary}</title>
+<meta name="description" content="{block:IndexPage}{block:Description}{MetaDescription}{/block:Description}{/block:IndexPage}{block:PermalinkPage}{PostSummary}{/block:PermalinkPage}" />
+<link rel="shortcut icon" href="{Favicon}" />
+<link rel="alternate" type="application/rss+xml" href="{RSS}" />
+<meta name="color:Blog title" content="#FFFFFF"/>
+<meta name="color:Blog title Hover" content="#CFD86D"/>
+<meta name="if:RSS link" content="1">
+<meta name="if:Archive link" content="1">
+<meta name="if:Use logo" content="0">
+<meta name="image:Logo" content="">
+<meta name="if:Black arrows" content="0">
+<meta name="color:Links" content="#FFFFFF"/>
+<meta name="color:Links Hover" content="#CFD86D"/>
+<meta name="color:Title" content="#ffffff"/>
+<meta name="color:Text Bubble" content="#000000"/>
+<meta name="color:Text" content="#FFFFFF"/>
+<meta name="if:Caption" content="1">
+<meta name="if:Background image" content="1">
+<meta name="if:Show notes on permalink pages" content="1">
+<meta name="if:Show notes on home page" content="1">
+<meta name="color:Background" content="#000000"/>
+<meta name="font:Body" content="Helvetica"/>
+<meta name="image:Background" content="http://static.tumblr.com/df28qmy/Zyqlj2j0z/heart-of-the-universe.jpg">
+<meta name="if:Infinite Scroll Off" content="0">
+<meta name="if:345 Wide" content="1">
+<meta name="if:500 Wide" content="0">
+<meta name="if:600 Wide" content="0">
+<meta name="color:Home Page Notes" content="#ffffff"/>
+<meta name="if:Shadows" content="1">
+
+{block:IndexPage} <script type="text/javascript" src="http://www.themecloud.co/Themes/InfiniteV2/jquery.js"></script> <script type="text/javascript" src="http://www.themecloud.co/Themes/InfiniteV2/jjqueryfx.js"></script> {block:if345wide} <script type="text/javascript" src="http://www.themecloud.co/Themes/InfiniteV2/main{block:ifinfinitescrolloff}_no_scroll{/block:ifinfinitescrolloff}.js"></script>
+
+<link rel="stylesheet" href="http://www.themecloud.co/Themes/InfiniteV2/CSS/getcss.asp?css=main&id=48124" type="text/css">
+{/block:if345wide} {block:if500wide} <script type="text/javascript" src="http://www.themecloud.co/Themes/InfiniteV2/main{block:ifinfinitescrolloff}_no_scroll{/block:ifinfinitescrolloff}2.js"></script>
+<link rel="stylesheet" href="http://www.themecloud.co/Themes/InfiniteV2/CSS/getcss.asp?css=main2&id=48124" type="text/css">
+{/block:if500wide} {block:if600wide} <script type="text/javascript" src="http://www.themecloud.co/Themes/InfiniteV2/main{block:ifinfinitescrolloff}_no_scroll{/block:ifinfinitescrolloff}3.js"></script>
+<link rel="stylesheet" href="http://www.themecloud.co/Themes/InfiniteV2/CSS/getcss.asp?css=main3&id=48124" type="text/css">
+{/block:if600wide} {/block:IndexPage} {block:permalinkpage}
+<link rel="stylesheet" href="http://www.themecloud.co/Themes/InfiniteV2/CSS/getcss.asp?css=main&id=48124" type="text/css">
+{/block:permalinkpage} <script type="text/javascript" src="http://static.tumblr.com/ts2nqrf/Msal8du92/cufon.js"></script> <script type="text/javascript" src="http://static.tumblr.com/ts2nqrf/mNQl8du9p/bebas.js"></script> <script type="text/javascript" src="http://static.tumblr.com/df28qmy/u5slh3ibc/jquery.min.js"></script> <script type="text/javascript"> Cufon.DOM.ready(function() { Cufon.replace('.bebas', { fontFamily: 'bebas', hover:true }); $('.bebas').css('visibility','visible'); }); </script>
+<style type="text/css">
+{block:ifbackgroundimage} body {background-color:{color:Background}; color: {color:Text};font-size: 11px; font-family:{font:Body}; line-height: 14px; background-attachment: fixed; background-image:url('{image:Background}');} {/block:ifbackgroundimage} {block:ifnotbackgroundimage} body {background-color:{color:Background}; color: {color:Text};font-size: 11px; font-family:{font:Body}; line-height: 14px;} {/block:ifnotbackgroundimage} h1 { color:{color:Blog title}; font-weight: normal; font-size:60px; font-family: 'BebasNeueRegular', sans-serif; line-height: -4px;{block:ifuselogo}display:none;{/block:ifuselogo}} h1 a {color:{color:Blog title};} h1 a:hover {color:{color:Blog title Hover};} img{ border:0px;} .description {padding: 10px 0px 0px; clear: both; position: relative; text-align:center; width:500px; margin-left: auto ; margin-right: auto;} .ask {color:{color:Title}; font-size:12px;} .title {color:{color:Title};} #arrow {color:{color:Text Bubble}; font-size:20px;} .curve { background-color:{color:Text Bubble};} a {color: {color:Links}; text-decoration:none;} a:hover {color: {color:Links Hover};} #top-link { position:fixed; right:5px; bottom:5px; padding:10px; border:0px; } .perma {padding-bottom:3px;} .perma a {color:{color:Home Page Notes};} .caption_table a {color:{color:Home Page Notes};} {block:if345wide} .permatext { width:345px; } .caption_table { width:345px; } {/block:if345wide} {block:if500wide} .permatext { width:500px; } .back img { width:500px; height:20px; } .caption_table { width:500px; } {/block:if500wide} {block:if600wide} .permatext { width:600px; } .back img { width:600px; height:20px; } .caption_table { width:600px; } {/block:if600wide} {block:PermalinkPage} .caption_table { width:600px; } .box { width: 600px; } p.answer_form_container { width: 580px; } ol.notes { width: 600px; position:relative; list-style-type: none; margin: 0px 0 10px 0; font-size:11px; } ol.notes li.note { padding-top: 7px; padding-bottom:5px; vertical-align:middle;} ol.notes a { color:{color:Links}; } ol.notes img.avatar { display: false; padding:2px 5px 0 2px; border:0px; top:-20px;} ol.notes blockquote { margin: 0; } ol.notes blockquote a { text-decoration: none; } {/block:PermalinkPage}
+</style>
+<script src="http://static.tumblr.com/df28qmy/Mpalh3i8p/jquery.scrollto-1.4.0-min.js" type="text/javascript"></script> <script type="text/javascript"> //plugin jQuery.fn.topLink = function(settings) { settings = jQuery.extend({ min: 1, fadeSpeed: 200 }, settings); return this.each(function() { //listen for scroll var el = $(this); el.hide(); //in case the user forgot $(window).scroll(function() { if($(window).scrollTop() >= settings.min) { el.fadeIn(settings.fadeSpeed); } else { el.fadeOut(settings.fadeSpeed); } }); }); }; //usage w/ smoothscroll $(document).ready(function() { //set the link $('#top-link').topLink({ min: 400, fadeSpeed: 500 }); //smoothscroll $('#top-link').click(function((e)) { e.preventDefault(); $.scrollTo(0,300); }); }); </script>
+</head>
+<body>
+{block:IndexPage} <a href="#top" id="top-link"><img style="border:0px; {block:ifinfinitescrolloff}display:none; {/block:ifinfinitescrolloff}"src='{block:ifnotblackarrows}http://b.imagehost.org/0971/jump_to_top_arrow.png{/block:ifnotblackarrows}{block:ifblackarrows}http://static.tumblr.com/2w7y46r/Xnjlix23y/jump_to_top_arrow.png{/block:ifblackarrows}'/></a> {block:ifinfinitescrolloff} {block:NextPage}
+<div style="position:fixed; right:10px; top:44%;"> <a href="{NextPage}"><img src="{block:ifnotblackarrows}http://static.tumblr.com/2w7y46r/d6Vliserj/arrowwhite2.png{block:ifnotblackarrows}{block:ifblackarrows}http://static.tumblr.com/2w7y46r/Eeplisevf/arrowblack2.png{/block:ifblackarrows}"/></a></div>
+{/block:NextPage} {block:PreviousPage}
+<div style="position:fixed; left:10px; top:44%;"> <a href="{PreviousPage}"><img src="{block:ifnotblackarrows}http://static.tumblr.com/2w7y46r/XCLliseqr/arrowwhite1.png{/block:ifnotblackarrows}{block:ifblackarrows}http://static.tumblr.com/2w7y46r/mduliseuy/arrowblack1.png{/block:ifblackarrows}"/></a></div> {/block:PreviousPage} {/block:ifinfinitescrolloff} {/block:IndexPage}
+<div id="kanesheader">
+<div style="text-align: center;">{block:ifuselogo}<a href="/"><img style="max-width:1500px; max-height:300px" src="{image:logo}"/></a>{/block:ifuselogo}
+<h1 class="bebas"><a href="/" style="font-size:50px;">{Title}</a></h1>
+</div>
+<div style="text-align: center; font-size:9.4px; {block:ifuselogo}margin-top:10px; {/block:ifuselogo}text-transform: uppercase;"> {block:AskEnabled}<a href="/ask">MESSAGE</a>   {/block:AskEnabled} {block:ifarchivelink}<a href="/archive">ARCHIVE</a>   {/block:ifarchivelink} {block:ifrsslink}<a href="{RSS}"> RSS </a>   {/block:ifrsslink} <a href="http://www.themecloud.co/theme.asp?id=1">THEME</a>   {block:HasPages} {block:Pages}<a href="{URL}">{Label}</a>   {/block:Pages} {/block:HasPages}
+<div class="description">{description}<br style="clear:both">
+</div>
+</div>
+</div>
+{block:indexpage}
+<div id="wrapper">
+{/block:indexpage} {block:PermalinkPage}
+<div id="wrapper" style="width:100%;">
+{/block:PermalinkPage} {block:indexpage}
+<div id="content-wrapper">
+{/block:indexpage} {block:PermalinkPage}
+<div id="content-wrapper" style="width:100%;">
+{/block:PermalinkPage} {block:indexpage}
+<div id="content">
+{/block:indexpage} {block:PermalinkPage}
+<div id="content" style="width:100%;">
+{/block:PermalinkPage} {block:indexpage}
+<div id="columns">
+{/block:indexpage} {block:PermalinkPage}
+<div id="columns" style="width:100%;">
+{/block:PermalinkPage} {block:indexpage}
+<ul class="posts-column wide">
+{/block:indexpage} {block:PermalinkPage}
+<ul class="posts-column wide" style="width:100%;">
+{/block:PermalinkPage} {block:Posts} {block:indexpage}
+<li class="post"> {/block:indexpage} {block:PermalinkPage}
+
+<li class="post" style="width:100%;">
+<table width="600" style="margin-left:auto; margin-right:auto;" align="center">
+<tr>
+<td align="center" style="text-align:left;"> {/block:PermalinkPage} {block:indexpage} {block:if500wide}
+<div class="box" style="width:500px;">
+{/block:if500wide} {block:if600wide}
+<div class="box" style="width:600px;">
+{/block:if600wide} {block:if345wide}
+<div class="box" style="width:345px;">
+{/block:if345wide} {/block:indexpage} {block:PermalinkPage}
+<div class="box" style="width:600px;">
+{/block:PermalinkPage} {block:Photo} {block:IndexPage} <a href="{Permalink}" target="_blank"> {block:if345wide} <img class="post-image" src="{PhotoURL-500}" width="345" alt="{PhotoAlt}" /> {/block:if345wide} {block:if500wide} <img class="post-image" src="{PhotoURL-500}" width="500" alt="{PhotoAlt}" /> {/block:if500wide} {block:if600wide} <img class="post-image" src="{PhotoURL-500}" width="600" alt="{PhotoAlt}" /> {/block:if600wide} </a> {/block:IndexPage} {block:permalinkpage} {LinkOpenTag}<img class="post-image" src=" {PhotoURL-HighRes}" width="600" alt="{PhotoAlt}" /> {/block:permalinkpage} {/block:Photo} {block:Photo} {block:indexpage} {block:IfCaption} {block:Caption}
+<table class="caption_table" style="background-color:{color:Text Bubble}; -moz-border-radius-bottomright: 4px; -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-left-radius:4px; border-bottom-right-radius:4px; padding:5px;">
+<tr>
+<Td style="padding:10px;">{Caption}</Td>
+</tr>
+</table>
+{/block:Caption} {/block:IfCaption} {/block:indexpage} {block:permalinkpage} {block:Caption}
+<table class="caption_table" style="background-color:{color:Text Bubble}; -moz-border-radius-bottomright: 4px; -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-left-radius:4px; border-bottom-right-radius:4px; padding:5px;">
+<tr>
+<Td style="padding:10px;">{Caption}</Td>
+</tr>
+</table>
+{/block:Caption} {/block:permalinkpage} <!--[if !IE]>--> {block:IfShadows} {block:IndexPage} {block:if345wide}<div class="345shadow"><img src="http://www.themecloud.co/Themes/InfiniteV2/IMG/shadow.png"/>{/block:if345wide} {block:if500wide}<img src="http://www.themecloud.co/Themes/InfiniteV2/IMG/shadow500.png"/> {/block:if500wide} {block:if600wide}<img src="http://www.themecloud.co/Themes/InfiniteV2/IMG/shadow600.png"/> {/block:if600wide} {/block:IndexPage} {block:PermalinkPage} <img src="http://www.themecloud.co/Themes/InfiniteV2/IMG/shadow600.png"/> {/block:PermalinkPage} {/block:IfShadows} <!--<![endif]--> {/block:Photo} {block:Text}
+<div class="curve">{block:Title}<a href="{Permalink}" class="title" style="padding:8px 8px 8px 8px;"> {Title} </a>{/block:Title}</div>
+{block:Title}
+<div id="arrow"></div>
+{/block:Title}
+<div style="padding-left:8px; padding-top:2px; padding-right:8px;">{Body}</div>
+{block:More}<br>
+<br>
+<a href="{Permalink}" class="readMore">Read More</a>{/block:More} <br>
+{block:ifshownotesonhomepage}<br>
+{/block:ifshownotesonhomepage} {/block:Text} {block:Video}
+<div class="video"> {block:IndexPage} {block:if345wide}{Video-250}{/block:if345wide} {block:if500wide}{Video-500}{/block:if500wide} {block:if600wide}{Video-500}{/block:if600wide} {/block:IndexPage} {block:PermalinkPage}{Video-500}{/block:PermalinkPage} </div>
+{block:indexpage}
+<div class="back"><img src="http://static.tumblr.com/df28qmy/SIplh2z29/untitled-1.gif"/></div>
+<div class="perma" >
+<div class="permatext"> <a href="{Permalink}" target="_blank">{TimeAgo}</a> {block:NoteCount}<a href="{Permalink}" target="_blank"> / {NoteCountwithLabel}{/block:NoteCount}</a> <a href="{ReblogURL}" target="_blank"> / reblog</a></div>
+</div>
+{/block:indexpage} {block:indexpage} {block:IfCaption} {block:Caption}
+<table class="caption_table" style="background-color:{color:Text Bubble}; -moz-border-radius-bottomright: 4px; -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-left-radius:4px; border-bottom-right-radius:4px; padding:5px;">
+<tr>
+<Td style="padding:10px;">{Caption}</Td>
+</tr>
+</table>
+{/block:Caption} {/block:IfCaption} {/block:indexpage} {block:permalinkpage} {block:Caption}
+<table class="caption_table" style="background-color:{color:Text Bubble}; -moz-border-radius-bottomright: 4px; -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-left-radius:4px; border-bottom-right-radius:4px; padding:5px;">
+<tr>
+<Td style="padding:10px;">{Caption}</Td>
+</tr>
+</table>
+{/block:Caption} {/block:permalinkpage} <!--[if !IE]>--> {block:IfShadows} {block:IndexPage} {block:if345wide}<div class="345shadow"><img src="http://www.themecloud.co/Themes/InfiniteV2/IMG/shadow.png"/>{/block:if345wide} {block:if500wide}<img src="http://www.themecloud.co/Themes/InfiniteV2/IMG/shadow500.png"/> {/block:if500wide} {block:if600wide}<img src="http://www.themecloud.co/Themes/InfiniteV2/IMG/shadow600.png"/> {/block:if600wide} {/block:IndexPage} {block:PermalinkPage} <img src="http://www.themecloud.co/Themes/InfiniteV2/IMG/shadow600.png"/> {/block:PermalinkPage} {/block:IfShadows} <!--<![endif]--> {/block:Video} {block:Answer}
+<div class="curve"><a href="{Permalink}" class="ask"> {Question} </a></div>
+<div id="arrow"></div>
+<div style="width:280px;">
+<table style="margin-left:15px;" width="100%">
+<tr>
+<td width="20"><img style="border:1px solid white;margin:2px;" src="{AskerPortraitURL-16}"/></td>
+<td style="padding-left:5px;padding-top:5px;padding-right:5px;">{Asker}</td>
+</tr>
+<tr>
+<td colspan="2" style="padding-left:0px;padding-right:5px;"><br>
+{Answer} </td>
+</tr>
+</table>
+<br>
+{block:ifshownotesonhomepage}<br>
+{/block:ifshownotesonhomepage} </div>
+{/block:Answer} {block:Link}
+<div class="curve"><a href="{URL}" class="title" {Target}> {Name} </a> </div>
+<div id="arrow"></div>
+{block:Description}
+<div style="padding-left:8px; padding-top:2px; padding-right:8px;">{Description}</div>
+{/block:Description}<br>
+{block:ifshownotesonhomepage}<br>
+{/block:ifshownotesonhomepage} {/block:Link} {block:Quote}
+<div class="curve"><a href="{Permalink}" class="title">"{Quote}"</a></div>
+<div id="arrow"></div>
+{block:Source} {Source}<br>
+{/block:Source}<br>
+{block:ifshownotesonhomepage}<br>
+{/block:ifshownotesonhomepage} {/block:Quote} {block:Audio}
+<div class="curve" style="padding-top:3px; padding-bottom:3px; background-color:#000000;">
+<div style=" width:100%; height:27px; font-size:1px; color:black; background-color:black;"> {AudioPlayerBlack} </div>
+<a href="{Permalink}" target="_blank" id="audiotest"></a></div>
+<div id="arrow" style="color:black;"></div>
+{block:AlbumArt} <img style="border:1px solid white; width:50px; margin-left:5px;" src="{AlbumArtURL}"/>{/block:AlbumArt}
+<div style="{block:AlbumArt}min-height:40px;margin-left:70px;{/block:AlbumArt}">{block:Caption}{Caption}{/block:Caption}</div>
+{block:AlbumArt}<br>
+{/block:AlbumArt} <br>
+<br>
+{block:indexpage}
+<div class="back"><img src="http://static.tumblr.com/df28qmy/SIplh2z29/untitled-1.gif"/></div>
+<div class="perma" >
+<div class="permatext"> <a href="{Permalink}" target="_blank">{TimeAgo}</a> {block:NoteCount}<a href="{Permalink}" target="_blank"> / {NoteCountwithLabel}{/block:NoteCount}</a> <a href="{ReblogURL}" target="_blank"> / reblog</a>{block:ExternalAudio}<a href="{ExternalAudioURL}"> / download</a>{/block:ExternalAudio}</div>
+</div>
+{/block:indexpage} {/block:Audio} {block:Chat}
+<div class="curve">{block:Title}<a href="{Permalink}" class="title"> {Title} </a>{/block:Title}</div>
+{block:Title}
+<div id="arrow"></div>
+{/block:Title}
+<div class="chat" style="padding-left:5px;"> {block:Lines}{block:Label}<br>
+{Label}{/block:Label}<br>
+{Line}{/block:Lines}<br>
+<br>
+{block:ifshownotesonhomepage}<br>
+{/block:ifshownotesonhomepage} {/block:Chat} {block:indexpage} {block:ifshownotesonhomepage}
+<div class="back" style="{block:Photo}{block:ifcaption} display:none;{/block:ifcaption}{/block:Photo}"><img src="http://static.tumblr.com/df28qmy/SIplh2z29/untitled-1.gif"/></div>
+<div class="perma" style="{block:Photo}{block:ifcaption} display:none;{/block:ifcaption}{/block:Photo}">
+<div class="permatext"> <a href="{Permalink}" target="_blank">{TimeAgo}</a> {block:NoteCount}<a href="{Permalink}" target="_blank"> / {NoteCountwithLabel}{/block:NoteCount}</a> <a href="{ReblogURL}" target="_blank"> / reblog</a>{block:Audio}{block:ExternalAudio}<a href="{ExternalAudioURL}"> / download</a>{/block:ExternalAudio}{/block:Audio}</div>
+</div>
+{/block:ifshownotesonhomepage} {/block:indexpage}
+<div style="float:left;"> {block:PermalinkPage} {block:Photo}
+<div style="display:none;">
+<block:Caption><br>
+{Caption}<br>
+</block:Caption>
+</div>
+{/block:Photo} {block:Photo} <br>
+{/block:Photo} {block:Video} <br>
+{/block:Video} <a href="{Permalink}" target="_blank">{TimeAgo}</a> {block:NoteCount}<a href="{Permalink}" target="_blank"> / {NoteCountwithLabel}<br>
+{/block:NoteCount}</a>{/block:PermalinkPage} {block:PermalinkPage} {block:IfShowNotesOnPermalinkPages}<br>
+{block:PostNotes}{PostNotes}{/block:PostNotes}{/block:IfShowNotesOnPermalinkPages} {/block:PermalinkPage} </div>
+</div>
+{block:PermalinkPage} </td>
+</tr>
+</table>
+{/block:PermalinkPage} </li>
+{/block:Posts}
+</ul>
+</div>
+</div>
+</div>
+</div>
+{block:IndexPage}
+<div class="columnHolder footer">
+<div class="nav" id="navigation"> {block:Pagination} {block:PreviousPage}<a href="{PreviousPage}" class="navigate" id="previousPage">{/block:PreviousPage}{block:PreviousPage}</a>{/block:PreviousPage} {block:NextPage}<a href="{NextPage}" class="navigate" id="nextPage">{/block:NextPage}{block:NextPage}</a>{/block:NextPage}{/block:Pagination} </div>
+</div>
+{/block:IndexPage}
+<div style="display:none;"> <span id="current-page">{CURRENTPAGE}</span><span id="total-pages">{TotalPages}</span> </div>
+</body>
+</html>
