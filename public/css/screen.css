@@ -15,6 +15,8 @@ body {
     margin-bottom: 100px;
 }
 
+body.thanks .wrap {background: url(../img/wrap_background_alternate.jpg) no-repeat center -21px #050508;}
+
 #alternate {background: url(../img/wrap_background_alternate.jpg) no-repeat center -1px #050508;}
 
 .template_content {
@@ -67,6 +69,9 @@ a {color: #ff8321;}
 
 .signup p {font-size: 16px;}
 
+body.thanks .signup p {padding-top: 30px; font-size: 20px;}
+body.thanks .signup h2 {padding-top: 5px; font-size: 40px; padding-bottom: 0; margin-bottom: 0;}
+
 .signup form {margin: 0 auto; width: 522px; padding-top: 20px; margin-bottom: 20px;}
 
 .signup input {
@@ -94,6 +99,7 @@ a {color: #ff8321;}
 }
 
 .signup ul.social {margin-top: 60px; clear: both;}
+body.thanks ul.social {margin-top: 20px;}
 
 .signup ul.social li {display: inline; padding-left: 3px; padding-right: 3px;}
 
@@ -177,6 +183,8 @@ ul.share li.em a {background: url(../img/buttons/small_em.png) no-repeat;}
     background: url(../img/wow_hdr.png) no-repeat;
 	clear: both;
 }
+
+.thanks .wow_hdr {margin-top: 20px;}
 
 .wow_main {
 	margin: 0 auto;
