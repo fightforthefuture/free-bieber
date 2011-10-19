@@ -17,8 +17,12 @@ li {margin-bottom: 5px;}
 #flashContent {width:480px;height:360px;}
 #bodydiv {padding: 2px 0 0 40px;}
 a.large_button {
-	float: left;
+float: left;
+margin-right: 7px;
 }
+
+.large_button span {padding-top: 13px;}
+
 
 .videoh5 {
     color: #FF8321;
@@ -40,8 +44,7 @@ a.large_button {
 
 #navigation1 {
 /*	visibility:hidden; */
-	padding:10px 0 5px 0;
-	margin:0 0px 0 32px;
+	margin-top: 20px;
 	float:left;
 	position:relative;
 }
@@ -49,7 +52,7 @@ a.large_button {
 #navigation2 {
 	float:left;
 	position:relative;
-	margin:0 0 0 32px;
+	margin-top: 20px;
 }
 
 #navigation2 #tagline {
@@ -210,20 +213,20 @@ a.large_button {
 			<div id="flashContent">
 			</div>
             <div id="navigation1">
-                <a href="javascript:startRecording()" class="large_button"><span style="padding-top:11px">Record</span></a>
-                <a href="javascript:pauseRecording()" class="large_button"><span>Pause Recording</span></a>
-                <a href="javascript:resetRecording()" class="large_button"><span>Reset Recording</span></a>
-                <a href="javascript:publishRecording()" class="large_button"><span style="padding-top:11px">Publish</span></a><br/>
+                <a href="javascript:startRecording()" class="large_button"><span>Record</span></a>
+                <a href="javascript:pauseRecording()" class="large_button"><span>Pause</span></a>
+                <a href="javascript:resetRecording()" class="large_button"><span>Reset</span></a>
+                <a href="javascript:publishRecording()" class="large_button"><span>Publish</span></a><br/>
 			</div>
             <div id="navigation2" style="float:left;position:relative">
-                <a href="javascript:previewRecording()" class="large_button"><span>Preview Recording</span></a>
+                <a href="javascript:previewRecording()" class="large_button"><span>Preview</span></a>
 			</div>
 		</div>
         <div id="status"></div>
         <div id="facebook"><a href="" id="facebooklink">Share Your Video On Facebook!</a></div>
 
 	</div>
-	<div style="float: left; margin-top: 460px; width: 400px; margin-left: 60px;">
+	<div style="float: left; margin-top: 490px; width: 400px; margin-left: 60px;">
 	<p>Tell the world why 5-years in jail for streaming _anything_ copyrighted is a terrible idea.</p>
 
 	<p>Or protest the bill by excercising your fair use rights (sing a song, do a dance, etc). Here are some points you could mention:</p>
@@ -238,8 +241,37 @@ a.large_button {
 	
 	</div>
  	<script type="text/javascript"> 
+
+
+
+// Using a random password generator to make filenames. 
+// That's how we role I guess.
+
+	function password(length, special) {
+	  var iteration = 0;
+	  var password = "";
+	  var randomNumber;
+	  if(special == undefined){
+	      var special = false;
+	  }
+	  while(iteration < length){
+	    randomNumber = (Math.floor((Math.random() * 100)) % 94) + 33;
+	    if(!special){
+	      if ((randomNumber >=33) && (randomNumber <=47)) { continue; }
+	      if ((randomNumber >=58) && (randomNumber <=64)) { continue; }
+	      if ((randomNumber >=91) && (randomNumber <=96)) { continue; }
+	      if ((randomNumber >=123) && (randomNumber <=126)) { continue; }
+	    }
+	    iteration++;
+	    password += String.fromCharCode(randomNumber);
+	  }
+	  return password;
+	}
+	
 		var so = new SWFObject("OverlayRecorder.swf", "OverlayRecorder", "480", "360", "10", "0x1E1E1E"); 
 		so.addParam("scale", "noscale"); 
+				so.addParam("scale", "noscale"); 
+		so.addParam("filename", password(20))
 		so.addParam("align", "middle"); 
 		so.addParam("salign", "tl");
 		so.addParam("showmenu", "false");

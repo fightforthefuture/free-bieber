@@ -364,12 +364,17 @@ ul.share_petition li.tum a {background: url(../img/buttons/wide_tum.png) no-repe
     width: 120px; /* 120 */
 }
 
+#navigation1 .large_button {
+	padding-right: 4px;
+}
+
 #navigation1 .large_button span {
     text-align:center;
     width: 80px;
     margin-left:-3px;
     padding-right:0px;
-    padding-top:3px;
+	padding-left: 1px;
+
 }
 
 #navigation2 .large_button span {
@@ -377,7 +382,7 @@ ul.share_petition li.tum a {background: url(../img/buttons/wide_tum.png) no-repe
     width: 80px;
     margin-left:-3px;
     padding-right:0px;
-    padding-top:3px;
+
 }
 
 .large_button span {
