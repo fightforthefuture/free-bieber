@@ -127,6 +127,8 @@
 		function previewRecording() 
 		{ 
             $("#preview").show();
+            $("#recording").hidden();
+            $("#not").hidden();
 			swf.previewRecording(); 
 		}
 		function getMovieName(movieName) { if (navigator.appName.indexOf("Microsoft") != -1) { return window[movieName] } else { return document[movieName] } }
