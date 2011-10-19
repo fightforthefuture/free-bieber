@@ -37,6 +37,15 @@
     position: absolute;
     display: none;
 }
+#allow {
+    background: url(../img/fAllow.png) no-repeat;
+    z-index: 9;
+    width: 480px;
+    height: 358px;
+    position: absolute;
+    display: block;
+}
+
 
 #facebook {
     position: absolute;
@@ -59,8 +68,7 @@
 		{
 			swf = getMovieName('OverlayRecorder');
 			initRecording() 
-
-			
+            $("#allow").hide();
 		}
 		function debugRecording(value) 	{ var x=document.getElementById("status1"); x.innerHTML = value 	 }
 		
@@ -101,6 +109,7 @@
 			//x.style.visibility = "hidden";
             $('#recording').show();
             $('#not').hide();
+            $("#preview").hide();
 			swf.startRecording(); 
 		}
 		function pauseRecording() 
@@ -109,6 +118,7 @@
 			x.style.visibility = "visible";
             $('#recording').hide();
             $('#not').show();
+            $("#preview").hide();
 			swf.pauseRecording(); 
 		}
 		function resetRecording() 
@@ -122,6 +132,8 @@
             $('#recording').hide();
             $('#not').hide();
             $('#processing').show();
+            
+            $("#preview").hide();
 			swf.publishRecording(); 
 		}
 		function previewRecording() 
@@ -141,6 +153,7 @@
     <div id="preview" class="others"></div>
     <div id="not" class="others"></div>
     <div id="processing"></div>
+    <div id="allow"></div>
 		<div id="flash"  style="float:left;position:absolute; width:480px;height:360px;">
 			<div id="flashContent">
 			</div>
