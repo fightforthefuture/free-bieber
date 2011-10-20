@@ -83,7 +83,7 @@ a {color: #ff8321;}
     margin: 0;
     font-weight: bold;
     color: #a9a9a9;
-    font-size: 22px;
+    font-size: 20px;
     padding-left: 15px;
     float: left;
 }
@@ -94,8 +94,12 @@ a {color: #ff8321;}
     height: 42px;
     border: 0;
     padding: 0;
-    text-indent: -9999px;
     float: left;
+	font-weight: bold;
+	font-size: 18px;
+	color: #fff;
+	text-shadow: 2px 2px 3px rgba(0,0,0,.7);
+	cursor: pointer;
 }
 
 .signup ul.social {margin-top: 60px; clear: both;}
