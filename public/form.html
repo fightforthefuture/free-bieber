@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+		
+		<title>OverlayRecorder</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="/css/reset.css" type="text/css" />
+        <link rel="stylesheet" href="/css/screen.css" type="text/css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	    <script src="//cdn.optimizely.com/js/11189875.js"></script>
+		
+<style type="text/css" media="screen">
+body {line-height: 1.5;}
+p {margin-bottom: 10px;}
+
+ul {list-style-type: disc; padding: 10px}
+li {margin-bottom: 5px;}
+#flashContent {width:480px;height:360px;}
+#bodydiv {padding: 2px 0 0 40px;}
+a.large_button {
+float: left;
+margin-right: 7px;
+}
+
+.large_button span {padding-top: 13px;}
+
+
+.videoh5 {
+    color: #FF8321;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 6px;
+}
+
+.subh5 {
+    width:450px;
+    padding-left:25px;
+    color: #FF8321;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-left:0px;
+}
+
+#navigation1 {
+/*	visibility:hidden; */
+	margin-top: 20px;
+	float:left;
+	position:relative;
+}
+
+#navigation2 {
+	float:left;
+	position:relative;
+	margin-top: 20px;
+}
+
+#navigation2 #tagline {
+	float:right;
+}
+
+.others {
+            width: 374px; 
+            height: 55px; 
+            position: absolute; 
+            z-index: 9; 
+            left: 40px; 
+            top: 30px; 
+            display: none;
+            }
+
+   #recording {background: url(/img/fRecording.png) no-repeat;}    
+   #preview {background: url(/img/fPlaying.png) no-repeat;}
+   #not {background: url(/img/fNot.png) no-repeat;}
+     
+   #status {
+        position: absolute;
+    width: 480px;
+    text-align: center;
+    z-index: 9;
+    height: 20px;
+    margin-top: 280px;
+        }
+
+#processing {
+    background: url(../img/processing.png) no-repeat;
+    z-index: 9;
+    width: 480px;
+    height: 358px;
+    position: absolute;
+    display: none;
+}
+#allow {
+    background: url(../img/fAllow.png) no-repeat;
+    z-index: 9;
+    width: 480px;
+    height: 358px;
+    position: absolute;
+    display: block;
+}
+
+
+#facebook {
+    position: absolute;
+    width: 480px;
+    text-align: center;
+    z-index: 10;
+    height: 20px;
+    margin-top: 250px;
+    display: none;
+}
+
+form#signup {
+	background: white;
+	padding: 20px;
+	margin-top: 10%;
+	margin-left: 0;
+	overflow: auto;
+}
+
+body.signup {
+	background: url(../img/body_background.png);
+    margin: 0; 
+    padding: 0;
+    font-family: "helvetica neue", arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.3;
+    color: #fff;
+}
+
+</style>
+
+</head>
+	<body class="signup">
+		<form name="signup" action="http://act.fightforthefuture.org/page/signup/free-bieber" method="post" id="signup">
+			<h3 style="color: #666; font-size: 15px; margin-bottom: 10px;">Urgency: S. 978 could send any one of us to jail. It's already passed the Senate Judiciary Committee, and we expect introduction in the House soon.</h2>
+				<label class="stupid">Email Address</label>
+	        <input placeholder="Email Address" type="email" name="email" id="emailer" />
+	        <div id="detailer">
+	            <input name="firstname" placeholder="First" />
+	            <input name="lastname" placeholder="Last" />
+	            <input name="zip" placeholder="Zip" />
+	        </div>
+	        <button>Free Bieber</button>
+	    </form>
+		<script>
+				if ($.browser.msie) {
+				    $(".stupid").show();
+					$(".stupid").click(function() {
+						$('.stupid').hide();
+					});
+					$('#signup input').focus(function() {
+					  $(".stupid").hide();
+					});
+				  }
+				
+		</script>
+	</body>
+</html>
