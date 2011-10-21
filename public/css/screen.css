@@ -8,6 +8,11 @@ body {
     color: #fff;
 }
 
+.disclosure {
+    font-style:italic;
+    font-size: 11px;
+}
+
 .wrap {
     margin: 0 auto;
     width: 1135px;
@@ -72,7 +77,7 @@ a {color: #ff8321;}
 .thanks .signup p {padding-top: 30px; font-size: 20px;}
 .thanks .signup h2 {padding-top: 5px; font-size: 40px; padding-bottom: 0; margin-bottom: 0;}
 
-.signup form {margin: 0 auto; width: 522px; padding-top: 20px; margin-bottom: 20px;}
+.signup form {margin: 0 auto; width: 522px; padding-top: 10px; margin-bottom: 20px;}
 
 .signup input {
     background: url(../img/form_email.png) no-repeat; 
