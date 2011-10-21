@@ -362,6 +362,7 @@ ul.share_petition li.tum a {background: url(../img/buttons/wide_tum.png) no-repe
 }
 
 .paparazzi .main {padding-top: 20px;}
+.paparazzi img {width: 336px; margin-bottom: 10px;}
 
 .paparazzi .large_button span {
     text-align: center;
