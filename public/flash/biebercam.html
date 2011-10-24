@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+		
+		<title>OverlayRecorder</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="/css/reset.css" type="text/css" />
+        <link rel="stylesheet" href="/css/screen.css" type="text/css" />
+
+<style type="text/css" media="screen">
+body {line-height: 1.5;}
+p {margin-bottom: 10px;}
+
+ul {list-style-type: disc; padding: 10px}
+li {margin-bottom: 5px;}
+#flashContent {width:480px;height:360px;}
+#bodydiv {padding: 2px 0 0 40px;}
+a.large_button {
+float: left;
+margin-right: 7px;
+}
+
+.large_button span {padding-top: 13px;}
+
+
+.videoh5 {
+    color: #FF8321;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 6px;
+}
+
+.subh5 {
+    width:450px;
+    padding-left:25px;
+    color: #FF8321;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-left:0px;
+}
+
+#navigation1 {
+/*	visibility:hidden; */
+	margin-top: 20px;
+	float:left;
+	position:relative;
+}
+
+#navigation2 {
+	float:left;
+	position:relative;
+	margin-top: 20px;
+}
+
+#navigation2 #tagline {
+	float:right;
+}
+
+.others {
+            width: 374px; 
+            height: 55px; 
+            position: absolute; 
+            z-index: 9; 
+            left: 40px; 
+            top: 30px; 
+            display: none;
+            }
+
+   #recording {background: url(/img/fRecording.png) no-repeat;}    
+   #preview {background: url(/img/fPlaying.png) no-repeat;}
+   #not {background: url(/img/fNot.png) no-repeat;}
+     
+   #status {
+        position: absolute;
+    width: 480px;
+    text-align: center;
+    z-index: 9;
+    height: 20px;
+    margin-top: 280px;
+        }
+
+#processing {
+    background: url(../img/processing.png) no-repeat;
+    z-index: 9;
+    width: 480px;
+    height: 358px;
+    position: absolute;
+    display: none;
+}
+#allow {
+    background: url(../img/fAllow.png) no-repeat;
+    z-index: 9;
+    width: 480px;
+    height: 358px;
+    position: absolute;
+    display: block;
+}
+
+
+#facebook {
+    position: absolute;
+    width: 480px;
+    text-align: center;
+    z-index: 10;
+    height: 20px;
+    margin-top: 250px;
+    display: none;
+}
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    
+<script type="text/javascript" src="swfobject.js"></script>
+
+	<script>
+	/* This function will be called from flash after flash preloaded and it loaded the overlay image */
+		var swf;
+		function onLoad()
+		{
+			swf = getMovieName('OverlayRecorder');
+			initRecording() 
+            $("#allow").hide();
+		}
+		function debugRecording(value) 	{ var x=document.getElementById("status1"); x.innerHTML = value 	 }
+		
+		//This is called from flash, after this only we can allow interaction
+		function mediaReady()
+		{
+			var x=document.getElementById("navigation1");
+			x.style.visibility = "visible";
+		}
+		//this function called from flash and it will show you the progress. It will just dispatched the current media position only.
+		
+		function mediaSaving(value){var x=document.getElementById("status"); x.innerHTML = "Saving"}
+		function mediaSaved(value){var x=document.getElementById("status"); x.innerHTML = "Saved"}
+		function mediaProgress(value){}
+		function publishProgress(status,percent,transferred,total,speed){ 
+            var x=document.getElementById("status"); 
+            x.innerHTML = "status > " +status + " :: percent > " +percent + " :: transferred > " +transferred + " :: total > " +total + " :: speed > " +speed;
+        }
+		function publishStatus(status){ var x=document.getElementById("status"); x.innerHTML = status  }
+		function publishFinished(link){ 
+            var x=document.getElementById("status"); x.innerHTML = link; 
+            safeurl = encodeURIComponent(link);
+            safedescription = encodeURIComponent("Free Bieber: No Jail For YouTube and Facebook Users!"); 
+            fbstring = "https://www.facebook.com/sharer.php?u=" + safeurl + "&t=" + safedescription;
+            $('#facebooklink').attr('href', fbstring);
+            $('#facebook').show();
+            $('#flash').hide();
+        }
+		function publishError(error){ var x=document.getElementById("status"); x.innerHTML = error }
+		//following are function call to flash object
+		function initRecording() 
+		{
+			swf.initRecording(); 
+		}
+		function startRecording() 
+		{ 
+			//var x=document.getElementById("navigation2");
+			//x.style.visibility = "hidden";
+            $('#recording').show();
+            $('#not').hide();
+            $("#preview").hide();
+			swf.startRecording(); 
+		}
+		function pauseRecording() 
+		{
+			var x=document.getElementById("navigation2");
+			x.style.visibility = "visible";
+            $('#recording').hide();
+            $('#not').show();
+            $("#preview").hide();
+			swf.pauseRecording(); 
+		}
+		function resetRecording() 
+		{ 
+			var x=document.getElementById("navigation2");
+			x.style.visibility = "hidden";
+			swf.resetRecording(); 
+		}
+		function publishRecording() 
+		{ 
+            $('#recording').hide();
+            $('#not').hide();
+            $('#processing').show();
+            
+            $("#preview").hide();
+			swf.publishRecording(); 
+		}
+		function previewRecording() 
+		{ 
+            $("#preview").show();
+            $("#recording").hide();
+            $("#not").hide();
+			swf.previewRecording(); 
+		}
+		function getMovieName(movieName) { if (navigator.appName.indexOf("Microsoft") != -1) { return window[movieName] } else { return document[movieName] } }
+		
+	</script>
+</head>
+	<body>
+	<div id="bodydiv" align="center">
+	<h4 class="videoh5">Record a Video From Behind Bars</h4>
+    <div id="recording" class="others"></div>
+    <div id="preview" class="others"></div>
+    <div id="not" class="others"></div>
+    <div id="processing"></div>
+    <div id="allow"></div>
+		<div id="flash"  style="float:left;position:absolute; width:480px;height:360px;">
+			<div id="flashContent">
+			</div>
+            <div id="navigation1">
+                <a href="javascript:startRecording()" class="large_button"><span>Record</span></a>
+                <a href="javascript:pauseRecording()" class="large_button"><span>Pause</span></a>
+                <a href="javascript:resetRecording()" class="large_button"><span>Reset</span></a>
+                <a href="javascript:publishRecording()" class="large_button"><span>Publish</span></a><br/>
+			</div>
+            <div id="navigation2" style="float:left;position:relative">
+                <a href="javascript:previewRecording()" class="large_button"><span>Preview</span></a>
+			</div>
+		</div>
+        <div id="status"></div>
+        <div id="facebook"><a href="" id="facebooklink">Share Your Video On Facebook!</a></div>
+
+	</div>
+	<div style="float: right; width: 400px; margin-left: 60px;">
+	<p>Tell the world why 5-years in jail for streaming _anything_ copyrighted is a terrible idea.</p>
+
+	<p>Or protest the bill by exercising your fair use rights (sing a song, do a dance, etc). Here are some points you could mention:</p>
+	<ul>
+		<li>S. 978 is so extreme, even Justin Bieber could go to jail if it passes, for the videos that made him famous.</li>
+		<li>Even the song "Happy Birthday" is copyrighted. So singing it online could be a felony with a 5-year sentence.</li>
+		<li>Music companies have used laws made for large-scale pirates to sue 14-year-olds.</li>
+		<li>Even if they don't target ordinary users now, this gives the dangerous powers they could use against us in the future.</li>
+	</ul>
+	
+	<p>Once you're done, you can share it on Facebook or Youtube.</p>
+	
+	<p>Want to produce your own video? We've got a few assets to help you out:</p>
+	<ul>
+		<li><a href="https://s3.amazonaws.com/freebieber/freebieber-bars.png">Transparent jail-bar overlay</a></li>
+		<li><a href="https://s3.amazonaws.com/freebieber/freebieber-wig-and-bars.png">Transparent jailbar overlay, with wig!</a></li>
+		<li><a href="https://s3.amazonaws.com/freebieber/freebieber-wig-and-hair.psd">PSD for above overlays</a></li>
+	</ul>
+	
+	</div>
+ 	<script type="text/javascript"> 
+
+
+
+// Using a random password generator to make filenames. 
+// That's how we role I guess.
+
+	function password(length, special) {
+	  var iteration = 0;
+	  var password = "";
+	  var randomNumber;
+	  if(special == undefined){
+	      var special = false;
+	  }
+	  while(iteration < length){
+	    randomNumber = (Math.floor((Math.random() * 100)) % 94) + 33;
+	    if(!special){
+	      if ((randomNumber >=33) && (randomNumber <=47)) { continue; }
+	      if ((randomNumber >=58) && (randomNumber <=64)) { continue; }
+	      if ((randomNumber >=91) && (randomNumber <=96)) { continue; }
+	      if ((randomNumber >=123) && (randomNumber <=126)) { continue; }
+	    }
+	    iteration++;
+	    password += String.fromCharCode(randomNumber);
+	  }
+	  return password;
+	}
+	
+		var so = new SWFObject("OverlayRecorder.swf", "OverlayRecorder", "480", "360", "10", "0x1E1E1E"); 
+		so.addParam("scale", "noscale"); 
+				so.addParam("scale", "noscale"); 
+		so.addParam("filename", password(20))
+		so.addParam("align", "middle"); 
+		so.addParam("salign", "tl");
+		so.addParam("showmenu", "false");
+		so.addParam("allowScriptAccess", "always");
+		so.addParam("flashvars", "overlayimage=http://joshuablount.com/media/bars.png&filename=random");
+        so.addParam("wmode", "transparent");
+		so.write("flashContent"); 
+    </script> 
+
+	<script type="text/javascript">
+	var _sf_async_config={uid:30346,domain:"freebieber.org"};
+	(function(){
+	  function loadChartbeat() {
+	    window._sf_endpt=(new Date()).getTime();
+	    var e = document.createElement('script');
+	    e.setAttribute('language', 'javascript');
+	    e.setAttribute('type', 'text/javascript');
+	    e.setAttribute('src',
+	       (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+	       "js/chartbeat.js");
+	    document.body.appendChild(e);
+	  }
+	  var oldonload = window.onload;
+	  window.onload = (typeof window.onload != 'function') ?
+	     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+	})();
+
+	</script>
+	</body>
+</html>
