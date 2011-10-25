@@ -276,7 +276,7 @@ margin-right: 7px;
 	  }
 	  return password;
 	}
-	
+	    var filenamez = password(20);
 		var so = new SWFObject("/flash/OverlayRecorder.swf", "OverlayRecorder", "480", "360", "10", "0x1E1E1E"); 
 		so.addParam("scale", "noscale"); 
 				so.addParam("scale", "noscale"); 
@@ -285,7 +285,7 @@ margin-right: 7px;
 		so.addParam("salign", "tl");
 		so.addParam("showmenu", "false");
 		so.addParam("allowScriptAccess", "always");
-		so.addParam("flashvars", "overlayimage=http://joshuablount.com/media/bars.png&filename=password(20)");
+		so.addParam("flashvars", "overlayimage=http://joshuablount.com/media/bars.png&filename=" + filenamez "");
         so.addParam("wmode", "transparent");
 		so.write("flashContent"); 
     </script> 
