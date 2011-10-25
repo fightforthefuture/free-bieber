@@ -320,9 +320,9 @@ h2.center_cta {
 
 ul.share_petition {text-align: center; margin-top: 20px;}
 ul.share_petition li {display: inline;}
-ul.share_petition li a {width: 150px; height: 31px; display: inline-block; text-indent: -9999px; margin-left: 5px; margin-right: 5px; cursor: pointer;}
-
-ul.share_petition li.fb a {background: url(../img/buttons/wide_fb.png) no-repeat; width: 169px;}
+a#cta_fb_share, ul.share_petition li a {width: 150px; height: 31px; display: inline-block; text-indent: -9999px; margin-left: 5px; margin-right: 5px; cursor: pointer;}
+a#cta_fb_share {margin-bottom: -3px;}
+a#cta_fb_share, ul.share_petition li.fb a {background: url(../img/buttons/wide_fb.png) no-repeat; width: 169px;}
 ul.share_petition li.tw a {background: url(../img/buttons/wide_tw.png) no-repeat;}
 ul.share_petition li.gp a {background: url(../img/buttons/wide_gp.png) no-repeat;}
 ul.share_petition li.tum a {background: url(../img/buttons/wide_tum.png) no-repeat;}
@@ -367,6 +367,7 @@ ul.share_petition li.tum a {background: url(../img/buttons/wide_tum.png) no-repe
 }
 
 .paparazzi .main {padding-top: 20px;}
+.paparazzi img {width: 336px; margin-bottom: 10px;}
 
 .paparazzi .large_button span {
     text-align: center;

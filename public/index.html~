@@ -14,10 +14,9 @@
     <script src="/js/jquery.jcarousel.min.js"></script>
     <script src="/js/carousel.js"></script>
     <meta property="og:title" content="Free Beiber: Vote No On S. 978" />
-    <meta property="og:description" content="I just signed a petition to stop a law so crazy even @JustinBieber would go to jail if it passes.  Sign it: freebieber.org" />
+    <meta property="og:description" content="A new bill in Congress makes posting a video containing any copyrighted work a felony -- with up to 5 years in prison!" />
     <meta property="og:image" content="http://freebieber.org/img/share-fb.png" />
     <meta property="og:url" content="http://freebieber.org" />
-    <meta property="fb:admins" content="stickwithjosh"/>
 
     <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
 </head>
@@ -89,11 +88,6 @@
               <p>From super-stardom to a shared cell with a stainless steel sink/toilet... Bieber thinks "How did this happen?"</p>
               <p>It hasn't, but it could soon. Nobody should go to jail for harmless self-expression. Congress urgently needs to hear from you!</p>
             </div>
-
-            <div class="9">
-              <h2></h2>
-              <p></p>
-            </div>
         </div>
 
    <ol class="nav">
@@ -105,7 +99,6 @@
         <li><a href="#" class="pager_button" rel="6">6</a></li>
         <li><a href="#" class="pager_button" rel="7">7</a></li>
         <li><a href="#" class="pager_button" rel="8">8</a></li>
-        <li><a href="#" class="pager_button" rel="9">9</a></li>
     </ol>
 
     <a href="" id="next_button" class="small_arrow"><span>Next Photo</span></a>
@@ -132,14 +125,14 @@
         <li><img rel="6" src="/img/slides/bieber6.jpg" /></li>
         <li><img rel="7" src="/img/slides/bieber7.jpg" /></li>
         <li><img rel="8" src="/img/slides/bieber8.jpg" /></li>
-        <li><img rel="9" src="/img/slides/bieber9.png" /></li>
       </ul>
     </div><!-- close .slides -->
 </div><!-- close .slide -->
 <div class="signup">
 
-    <h2>Help Keep YouTube Free. <br>
-	    Please Take 10 Seconds to Sign Our Petition and Stop This Bill.</h2>
+    <h2>We Need Your Help. <br />
+    Please Take 10 Seconds to Sign Our Petition and Stop This Bill.</h2>
+    <div class="disclosure">Fight for the Future will never share your email with anyone, but we will contact you about related campaigns.</div>
 
     <form name="signup" action="http://act.fightforthefuture.org/page/signup/free-bieber" method="post" id="signup">
 		<label class="stupid">Email Address</label>
@@ -157,13 +150,12 @@
 
     <ul class="social">
 		  <li class="fb"><a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Ffreebieber.org&t=I%20don't%20want%20%40JustinBieber%20to%20go%20to%20jail%2C%20help!">Facebook</a></li>
-        <li class="tw"><a href="http://twitter.com/share?original_referer=freebieber.org&source=tweetbutton&text=I%20just%20signed%20a%20petition%20to%20stop%20a%20law%20so%20crazy%20even%20%40JustinBieber%20would%20go%20to%20jail%20if%20it%20passes.%20%20Sign%20it%3A%20freebieber.org&hashtags=freebieber">Twitter</a></li>
+	        <li class="tw"><a href="http://twitter.com/share?original_referer=http%3A%2F%2Ffreebieber.org&source=tweetbutton&text=I%20don't%20want%20%40JustinBieber%20to%20go%20to%20jail%2C%20help!&via=freebieber4eva&hashtags=freebieber">Twitter</a></li>
 	        <li class="tum"><a href="http://www.tumblr.com/share/quote?quote=I%20don't%20want%20%40JustinBieber%20to%20go%20to%20jail%2C%20help!&source=http%3A%2F%2Ffreebieber.org">Tumblr</a></li>
     </ul>
 
 </div>
-<div class="recently">Fight for the Future will never share your email with anyone, but we will contact you about related campaigns.
-
+<div class="recently">Current signers: Rudolph Zola, Leon Regis, Josephine Mendes, and 482,585 others.
 </div><!-- close .recently -->
 
 <div class="jailbieber">
@@ -249,7 +241,7 @@ like to turn the internet into a movie store.</p>
 	
     <ul class="share_petition">
 		  <li class="fb"><a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Ffreebieber.org&t=I%20don't%20want%20%40JustinBieber%20to%20go%20to%20jail%2C%20help!">Facebook</a></li>
-        <li class="tw"><a href="http://twitter.com/share?original_referer=freebieber.org&source=tweetbutton&text=I%20just%20signed%20a%20petition%20to%20stop%20a%20law%20so%20crazy%20even%20%40JustinBieber%20would%20go%20to%20jail%20if%20it%20passes.%20%20Sign%20it%3A%20freebieber.org&hashtags=freebieber">Twitter</a></li>
+	        <li class="tw"><a href="http://twitter.com/share?original_referer=http%3A%2F%2Ffreebieber.org&source=tweetbutton&text=I%20don't%20want%20%40JustinBieber%20to%20go%20to%20jail%2C%20help!&via=freebieber4eva&hashtags=freebieber">Twitter</a></li>
 	        <li class="tum"><a href="http://www.tumblr.com/share/quote?quote=I%20don't%20want%20%40JustinBieber%20to%20go%20to%20jail%2C%20help!&source=http%3A%2F%2Ffreebieber.org">Tumblr</a></li>
     </ul>
 
@@ -338,13 +330,14 @@ like to turn the internet into a movie store.</p>
 
       
         <div class="block merch">
+		<div class="comingsoon"></div>
             <div class="top">
                 <h3>Free Bieber T-shirts</h3>
                 <h4>Selling like hotcakes in the prison commissary</h4>
             </div>
             <div class="main">
                 <div class="shirt">
-                    <a href="https://donate.fightforthefuture.org/page/contribute/"><img src="/img/shirt.png" alt="Justin Bieber T-shirt" /></a>
+                    <a href=""><img src="/img/shirt.png" alt="Justin Bieber T-shirt" /></a>
                     <div class="description">
                         <h5>SHIRT</h5>
                         <p>This shirt does exist in a warehouse, ready to be shipped.</p>
@@ -352,14 +345,14 @@ like to turn the internet into a movie store.</p>
                 </div><!-- close .shirt -->
 
                 <div class="sticker">
-                    <a href="https://donate.fightforthefuture.org/page/contribute/"><img src="/img/sticker.png" alt="Justin Bieber Sticker" /></a>
+                    <a href=""><img src="/img/sticker.png" alt="Justin Bieber Sticker" /></a>
                     <div class="description">
                         <h5>STICKER</h5>
                         <p>This shirt does exist in a warehouse, ready to be shipped.</p>
                     </div><!-- close .description -->
  
                 </div><!-- close .sticker -->
-            <a href="https://donate.fightforthefuture.org/page/contribute/" class="small_arrow"><span>See other shirt, sticker, tattoo</span></a>
+            <a href="" class="small_arrow"><span>See other shirt, sticker, tattoo</span></a>
             </div>
             <div class="bottom"></div>
         </div>
