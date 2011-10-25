@@ -151,6 +151,7 @@ margin-right: 7px;
             fbstring = "https://www.facebook.com/sharer.php?u=" + safeurl + "&t=" + safedescription;
             $('#cta_fb_share').attr('href', fbstring);
             $('#facebook').show();
+            $('#cta_fb_share').show();
             $('#flash').hide();
         }
 		function publishError(error){ var x=document.getElementById("status"); x.innerHTML = error }
