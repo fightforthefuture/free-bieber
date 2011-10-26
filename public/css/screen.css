@@ -493,15 +493,15 @@ ul.photos li img {background: url(../img/paparazzi_backgrounds.png) no-repeat}
     background: url(../img/shirt_divider.png) no-repeat right;
 }
 
-.shirt img {margin-left: 30px;}
-.sticker img {margin-left: 70px;}
+/* .shirt img {margin-left: 30px;} */
+/* .sticker img {margin-left: 70px;} */
 
-.sticker {
+.tattoo {
     float: right;
     width: 260px;
 }
 
-.sticker .description, .shirt .description {
+.item .description {
     background: url(../img/description_background.png) no-repeat;
     width: 228px;
     height: 71px;
@@ -631,6 +631,19 @@ ul.photos li img {background: url(../img/paparazzi_backgrounds.png) no-repeat}
 a#next_button, ol.nav {margin-top: 3px;}
 ol.nav li a {cursor:pointer;}
 
+/* Resize the store promo images. */
+.merch .item img {
+   max-width: 250px;
+   max-height: 220px;
+}
+
+.merch .shirt img {
+   margin-left: 20px;
+}
+
+.merch .tattoo img {
+   margin-left: 20px;
+}
 
 .comingsoon {
 	width: 584px;
