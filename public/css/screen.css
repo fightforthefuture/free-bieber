@@ -16,11 +16,10 @@ body {
 .wrap {
     margin: 0 auto;
     width: 1135px;
-    background: url(../img/wrap_background.jpg) no-repeat center -21px #050508;
     margin-bottom: 100px;
 }
 
-.thanks .wrap {background: url(../img/wrap_background_alternate.jpg) no-repeat center -21px #050508;}
+.wrap {background: url(../img/wrap_background_alternate.jpg) no-repeat center -21px #050508;}
 
 #alternate {background: url(../img/wrap_background_alternate.jpg) no-repeat center -1px #050508;}
 
